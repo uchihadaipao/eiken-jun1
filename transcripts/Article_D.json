@@ -1,0 +1,148 @@
+{
+  "question_id": "Article_D",
+  "audio_file": "Part2_Article_D.mp3",
+  "answer": "-",
+  "total_duration_sec": 100.24,
+  "segments": [
+    {
+      "index": 1,
+      "speaker": "★",
+      "start": 0,
+      "end": 6520,
+      "en": "D. The Albaraque Wheat Project",
+      "zh": "D.",
+      "original_start": 0,
+      "original_end": 6520
+    },
+    {
+      "index": 2,
+      "speaker": "★",
+      "start": 6620,
+      "end": 12520,
+      "en": "The Middle Eastern country of Jordan has a long history of wheat cultivation, and bread",
+      "zh": "中东国家约旦有悠久的小麦种植历史，面包",
+      "original_start": 6520,
+      "original_end": 12520
+    },
+    {
+      "index": 3,
+      "speaker": "★",
+      "start": 12620,
+      "end": 18520,
+      "en": "has been an important part of the nation's diet for many centuries. In fact, a recent",
+      "zh": "几百年来一直是这个国家饮食的重要组成部分。事实上，最近的",
+      "original_start": 12520,
+      "original_end": 18520
+    },
+    {
+      "index": 4,
+      "speaker": "★",
+      "start": 18620,
+      "end": 24560,
+      "en": "discovery suggests that bread was being made in Jordan thousands of years before anywhere",
+      "zh": "一项发现表明，面包是在世界各地之前几千年就在约旦被制作出来的。",
+      "original_start": 18520,
+      "original_end": 24560
+    },
+    {
+      "index": 5,
+      "speaker": "★",
+      "start": 24660,
+      "end": 31400,
+      "en": "else in the world. Archaeologists investigating a site in the country's black desert found",
+      "zh": "考古学家在该国黑沙漠地区调查的一个遗址发现了",
+      "original_start": 24560,
+      "original_end": 31400
+    },
+    {
+      "index": 6,
+      "speaker": "★",
+      "start": 31500,
+      "end": 37879,
+      "en": "the remains of bread they believe was baked around 14,000 years ago by the Natufian people",
+      "zh": "他们认为大约14000年前由纳图菲人在那里烤制的面包遗迹。",
+      "original_start": 31400,
+      "original_end": 37879
+    },
+    {
+      "index": 7,
+      "speaker": "★",
+      "start": 37979,
+      "end": 45040,
+      "en": "who lived there. Despite Jordan's long history of bread making, a variety of factors such",
+      "zh": "尽管约旦有悠久的面包制作历史，但自1960年代以来廉价面粉的涌入等各种因素导致国内小麦生产",
+      "original_start": 37879,
+      "original_end": 45040
+    },
+    {
+      "index": 8,
+      "speaker": "★",
+      "start": 45140,
+      "end": 53000,
+      "en": "as an influx of cheap flour from the west since the 1960s have led to domestic wheat production",
+      "zh": "几乎消失。",
+      "original_start": 45040,
+      "original_end": 53000
+    },
+    {
+      "index": 9,
+      "speaker": "★",
+      "start": 53100,
+      "end": 60400,
+      "en": "all but disappearing. A community-led project known as the Albaraque Wheat Project is trying",
+      "zh": "一个名为\"阿尔巴拉克小麦项目\"的社区主导项目正试图",
+      "original_start": 53000,
+      "original_end": 60400
+    },
+    {
+      "index": 10,
+      "speaker": "★",
+      "start": 60500,
+      "end": 67280,
+      "en": "to reverse this trend by supporting small-scale farming operations. The project ensures",
+      "zh": "通过支持小规模农业经营来扭转这一趋势。该项目确保",
+      "original_start": 60400,
+      "original_end": 67280
+    },
+    {
+      "index": 11,
+      "speaker": "★",
+      "start": 67380,
+      "end": 73480,
+      "en": "that farmers get fair prices for their wheat and teaches them sustainable farming methods",
+      "zh": "农民获得公平的 wheat 价格，并教他们可持续的耕作方法。",
+      "original_start": 67280,
+      "original_end": 73480
+    },
+    {
+      "index": 12,
+      "speaker": "★",
+      "start": 73580,
+      "end": 79920,
+      "en": "that do not require chemical fertilizers and pesticides.",
+      "zh": "不需要使用化肥和杀虫剂的可持续农业方法。",
+      "original_start": 73480,
+      "original_end": 79920
+    },
+    {
+      "index": 13,
+      "speaker": "★",
+      "start": 80020,
+      "end": 85040,
+      "en": "Number 19. What is one thing the speaker says about Jordan?",
+      "zh": "第19题。",
+      "original_start": 80560,
+      "original_end": 85040
+    },
+    {
+      "index": 14,
+      "speaker": "★",
+      "start": 94120,
+      "end": 100240,
+      "en": "Number 20. What is the main aim of the Albaraque Wheat Project?",
+      "zh": "第20题。",
+      "original_start": 95120,
+      "original_end": 100240
+    }
+  ]
+}

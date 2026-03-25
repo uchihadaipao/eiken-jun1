@@ -1,0 +1,258 @@
+{
+  "question_id": "Article_A",
+  "audio_file": "Part2_Article_A.mp3",
+  "answer": "-",
+  "total_duration_sec": 123.72,
+  "segments": [
+    {
+      "index": 1,
+      "speaker": "★",
+      "start": 0,
+      "end": 3840,
+      "en": "Here are the directions for part 2.",
+      "zh": "以下是Part 2的指示。",
+      "original_start": 0,
+      "original_end": 3840
+    },
+    {
+      "index": 2,
+      "speaker": "★",
+      "start": 3940,
+      "end": 10360,
+      "en": "In this part, you will hear six passages A through F. Each passage will be followed",
+      "zh": "在这一部分，你将听到六篇短文A到F。",
+      "original_start": 3840,
+      "original_end": 10360
+    },
+    {
+      "index": 3,
+      "speaker": "★",
+      "start": 10460,
+      "end": 15800,
+      "en": "by two questions, number 13 through number 24.",
+      "zh": "每篇短文后有两个问题，编号从13到24。",
+      "original_start": 10360,
+      "original_end": 15800
+    },
+    {
+      "index": 4,
+      "speaker": "★",
+      "start": 15900,
+      "end": 21800,
+      "en": "For each question, you will have ten seconds to choose the best answer and mark your answer",
+      "zh": "每个问题，你有十秒钟选择最佳答案并标记答案。",
+      "original_start": 15800,
+      "original_end": 21800
+    },
+    {
+      "index": 5,
+      "speaker": "★",
+      "start": 21900,
+      "end": 24120,
+      "en": "on your answer sheet.",
+      "zh": "在答题纸上。",
+      "original_start": 21800,
+      "original_end": 24120
+    },
+    {
+      "index": 6,
+      "speaker": "★",
+      "start": 24220,
+      "end": 27640,
+      "en": "The passage and the questions will be given only once.",
+      "zh": "短文和问题只播放一次。",
+      "original_start": 24120,
+      "original_end": 27640
+    },
+    {
+      "index": 7,
+      "speaker": "★",
+      "start": 27740,
+      "end": 30480,
+      "en": "Now, let's begin.",
+      "zh": "现在开始。",
+      "original_start": 28280,
+      "original_end": 30480
+    },
+    {
+      "index": 8,
+      "speaker": "★",
+      "start": 30480,
+      "end": 34280,
+      "en": "A. Typhon",
+      "zh": "A. 堤丰",
+      "original_start": 31480,
+      "original_end": 34280
+    },
+    {
+      "index": 9,
+      "speaker": "★",
+      "start": 34380,
+      "end": 39960,
+      "en": "Typhon was one of the most terrifying creatures in ancient Greek mythology.",
+      "zh": "堤丰是古希腊神话中最可怕的生物之一。",
+      "original_start": 34280,
+      "original_end": 39960
+    },
+    {
+      "index": 10,
+      "speaker": "★",
+      "start": 40060,
+      "end": 47600,
+      "en": "He was believed to be a giant whose lower body was that of a snake, and he had enormous wings.",
+      "zh": "人们相信他是一个下半身像蛇的巨人，拥有巨大的翅膀。",
+      "original_start": 39960,
+      "original_end": 47600
+    },
+    {
+      "index": 11,
+      "speaker": "★",
+      "start": 47700,
+      "end": 54640,
+      "en": "Typhon could breathe fire and create powerful storms, and he threw large rocks during battles.",
+      "zh": "堤丰能喷火、制造强烈风暴，并在战斗中投掷巨石。",
+      "original_start": 47600,
+      "original_end": 54640
+    },
+    {
+      "index": 12,
+      "speaker": "★",
+      "start": 54740,
+      "end": 61240,
+      "en": "According to legend, Typhon had numerous offspring, many of which were fearsome creatures.",
+      "zh": "据传说，堤丰有很多后代，其中许多是可怕的生物。",
+      "original_start": 54640,
+      "original_end": 61240
+    },
+    {
+      "index": 13,
+      "speaker": "★",
+      "start": 61340,
+      "end": 66720,
+      "en": "They included the three-headed dog who guarded the entrance to the underworld.",
+      "zh": "其中包括守护地狱入口的三头狗。",
+      "original_start": 61240,
+      "original_end": 66720
+    },
+    {
+      "index": 14,
+      "speaker": "★",
+      "start": 66820,
+      "end": 70760,
+      "en": "Greek myths often helped to explain the natural world.",
+      "zh": "希腊神话常被用来解释自然界。",
+      "original_start": 66720,
+      "original_end": 70760
+    },
+    {
+      "index": 15,
+      "speaker": "★",
+      "start": 70860,
+      "end": 78560,
+      "en": "In one story, Typhon rebelled against Zeus, the ruler of the gods, trying to take his place.",
+      "zh": "在一个故事中，堤丰反抗众神之王宙斯，试图取代他的位置。",
+      "original_start": 70760,
+      "original_end": 78560
+    },
+    {
+      "index": 16,
+      "speaker": "★",
+      "start": 78660,
+      "end": 84960,
+      "en": "After a long battle, Zeus managed to defeat him using lightning bolts and then threw Typhon",
+      "zh": "经过漫长的战斗，宙斯用雷电击败了他，然后将堤丰",
+      "original_start": 78560,
+      "original_end": 84960
+    },
+    {
+      "index": 17,
+      "speaker": "★",
+      "start": 85060,
+      "end": 87960,
+      "en": "into a deep hole in the ground.",
+      "zh": "扔进了地面的一个深洞里。",
+      "original_start": 84960,
+      "original_end": 87960
+    },
+    {
+      "index": 18,
+      "speaker": "★",
+      "start": 88060,
+      "end": 91520,
+      "en": "Zeus then placed Mount Etna on top of him.",
+      "zh": "宙斯随后在他上面放置了埃特纳火山。",
+      "original_start": 87960,
+      "original_end": 91520
+    },
+    {
+      "index": 19,
+      "speaker": "★",
+      "start": 91620,
+      "end": 98440,
+      "en": "Mount Etna is a real volcano, so fire-breathing Typhon appears to have been an explanation",
+      "zh": "埃特纳火山是一座真实的火山，因此喷火的堤丰似乎成为了",
+      "original_start": 91520,
+      "original_end": 98440
+    },
+    {
+      "index": 20,
+      "speaker": "★",
+      "start": 98540,
+      "end": 102040,
+      "en": "for the origin of the volcano.",
+      "zh": "火山起源的解释。",
+      "original_start": 98440,
+      "original_end": 102040
+    },
+    {
+      "index": 21,
+      "speaker": "★",
+      "start": 102140,
+      "end": 103520,
+      "en": "Questions.",
+      "zh": "问题。",
+      "original_start": 102040,
+      "original_end": 103520
+    },
+    {
+      "index": 22,
+      "speaker": "★",
+      "start": 103620,
+      "end": 105600,
+      "en": "Number 13.",
+      "zh": "第13题。",
+      "original_start": 103520,
+      "original_end": 105600
+    },
+    {
+      "index": 23,
+      "speaker": "★",
+      "start": 105700,
+      "end": 119919,
+      "en": "What is one thing that the ancient Greeks believed about Typhon?",
+      "zh": "古希腊人对堤丰有什么看法？",
+      "original_start": 105600,
+      "original_end": 119919
+    },
+    {
+      "index": 24,
+      "speaker": "★",
+      "start": 120019,
+      "end": 121720,
+      "en": "Number 14.",
+      "zh": "第14题。",
+      "original_start": 119919,
+      "original_end": 121720
+    },
+    {
+      "index": 25,
+      "speaker": "★",
+      "start": 121820,
+      "end": 123720,
+      "en": "Why was Typhon punished?",
+      "zh": "为什么堤丰受到惩罚？",
+      "original_start": 121720,
+      "original_end": 123720
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "question_id": "Situation_G",
+  "audio_file": "Part3_Situation_G.mp3",
+  "answer": "-",
+  "total_duration_sec": 71.0,
+  "segments": [
+    {
+      "index": 1,
+      "speaker": "★",
+      "start": 0,
+      "end": 3000,
+      "en": "And question number 25.",
+      "zh": "第25题。",
+      "original_start": 0,
+      "original_end": 3000
+    },
+    {
+      "index": 2,
+      "speaker": "★",
+      "start": 11000,
+      "end": 14000,
+      "en": "Good afternoon parents.",
+      "zh": "下午好，各位家长。",
+      "original_start": 12000,
+      "original_end": 14000
+    },
+    {
+      "index": 3,
+      "speaker": "★",
+      "start": 14100,
+      "end": 20000,
+      "en": "As you know, this will be a joint fourth and fifth grade trip to Mount Oakley.",
+      "zh": "正如你们所知，这将是一次四年级和五年级的联合旅行，目的地是橡树山。",
+      "original_start": 14000,
+      "original_end": 20000
+    },
+    {
+      "index": 4,
+      "speaker": "★",
+      "start": 20100,
+      "end": 26000,
+      "en": "Buses will be parked outside the school entrance and will depart at 8 a.m. sharp.",
+      "zh": "公交车将停在学校入口外，将于上午8点准时出发。",
+      "original_start": 20000,
+      "original_end": 26000
+    },
+    {
+      "index": 5,
+      "speaker": "★",
+      "start": 26100,
+      "end": 31000,
+      "en": "The student should go directly to their bus without entering the school.",
+      "zh": "学生应该直接去他们的公交车，不进入学校。",
+      "original_start": 26000,
+      "original_end": 31000
+    },
+    {
+      "index": 6,
+      "speaker": "★",
+      "start": 31100,
+      "end": 37000,
+      "en": "Fourth graders will use bus 1 and fifth graders should board bus 2.",
+      "zh": "四年级学生乘坐1号车，五年级学生乘坐2号车。",
+      "original_start": 31000,
+      "original_end": 37000
+    },
+    {
+      "index": 7,
+      "speaker": "★",
+      "start": 37100,
+      "end": 45000,
+      "en": "The exception is Ms Klein's class, which has volunteered to help load supplies into a van that will follow the buses.",
+      "zh": "克莱因女士的班级是例外，他们自愿帮忙将物资装上一辆跟随公交车的小货车。",
+      "original_start": 37000,
+      "original_end": 45000
+    },
+    {
+      "index": 8,
+      "speaker": "★",
+      "start": 45100,
+      "end": 49000,
+      "en": "These students should meet in the gym at 7.30.",
+      "zh": "这些学生应该在7:30到体育馆集合。",
+      "original_start": 45000,
+      "original_end": 49000
+    },
+    {
+      "index": 9,
+      "speaker": "★",
+      "start": 49100,
+      "end": 58000,
+      "en": "Note that students who arrive after 8 will have to be driven privately to the destination by a parent or guardian.",
+      "zh": "请注意，8点之后到达的学生必须由家长或监护人亲自开车送到目的地。",
+      "original_start": 49000,
+      "original_end": 58000
+    },
+    {
+      "index": 10,
+      "speaker": "★",
+      "start": 58100,
+      "end": 61000,
+      "en": "Now mark your answer on your answer sheet.",
+      "zh": "现在请在答题纸上标记答案。",
+      "original_start": 58000,
+      "original_end": 61000
+    },
+    {
+      "index": 11,
+      "speaker": "★",
+      "start": 61100,
+      "end": 71000,
+      "en": "8. You have to...",
+      "zh": "8. You have ten seconds.",
+      "original_start": 61000,
+      "original_end": 71000
+    }
+  ]
+}

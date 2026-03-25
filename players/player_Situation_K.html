@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situation_K - 英検准1级听力点读</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a2f1a 0%, #0d1a0d 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(45, 90, 45, 0.2);
+            border-radius: 15px;
+            border: 1px solid #3d7a3d;
+        }
+        .header h1 { color: #8fbc8f; font-size: 1.8em; margin-bottom: 10px; }
+        .question-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #2d5a2d, #1a3d1a);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .answer-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #8b4513, #654321);
+            color: #ffd700;
+            padding: 6px 16px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            margin-left: 10px;
+        }
+        .progress-bar {
+            margin-top: 15px;
+            background: rgba(20, 40, 20, 0.8);
+            border-radius: 10px;
+            height: 20px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #2d5a2d, #4a8a4a);
+            transition: width 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75em;
+            color: #fff;
+        }
+        .audio-player {
+            background: rgba(20, 40, 20, 0.8);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            border: 1px solid #2d5a2d;
+        }
+        audio { width: 100%; height: 40px; border-radius: 8px; }
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .ctrl-btn {
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: 2px solid #2d5a2d;
+            background: rgba(30, 60, 30, 0.8);
+            color: #8fbc8f;
+            font-size: 0.95em;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .ctrl-btn:hover {
+            border-color: #8fbc8f;
+            box-shadow: 0 0 10px rgba(143, 188, 143, 0.3);
+        }
+        .ctrl-btn.active {
+            background: linear-gradient(135deg, #2d5a2d, #1a3d1a);
+            border-color: #8fbc8f;
+        }
+        .ctrl-btn.loop-active {
+            background: linear-gradient(135deg, #8b4513, #654321);
+            border-color: #ffd700;
+            color: #ffd700;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 5px rgba(255, 215, 0, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.8); }
+        }
+        .translation-mode .en-text {
+            display: none !important;
+        }
+        .translation-mode .sentence-card {
+            background: rgba(40, 30, 10, 0.9);
+            border-color: #8b6914;
+        }
+        .translation-mode .zh-text {
+            font-size: 1.3em !important;
+            color: #ffd700 !important;
+            font-weight: bold;
+        }
+        .hide-answer .answer-badge,
+        .hide-answer .card-answer {
+            display: none !important;
+        }
+        .sentences { display: flex; flex-direction: column; gap: 12px; }
+        .sentence-card {
+            background: rgba(20, 40, 20, 0.9);
+            border-radius: 12px;
+            padding: 18px 20px;
+            border: 2px solid #2d5a2d;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+        .sentence-card:hover {
+            border-color: #8fbc8f;
+            transform: translateX(5px);
+        }
+        .sentence-card.playing {
+            border-color: #ffd700;
+            background: rgba(40, 60, 40, 0.9);
+        }
+        .sentence-card.loop-playing {
+            border-color: #ff8c00;
+            background: rgba(50, 40, 20, 0.9);
+        }
+        /* 已校准状态 */
+        .sentence-card.calibrated {
+            border-color: #228b22;
+            background: rgba(20, 60, 30, 0.9);
+        }
+        .sentence-card.calibrated::before {
+            content: '✓';
+            position: absolute;
+            left: -8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #228b22;
+            color: #fff;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7em;
+            font-weight: bold;
+        }
+        .speaker { color: #8fbc8f; font-weight: bold; margin-right: 10px; }
+        .en-text { color: #e0e0e0; line-height: 1.6; margin: 8px 0; font-size: 1.05em; }
+        .zh-text { color: #6a8a6a; font-size: 0.95em; line-height: 1.5; font-style: italic; }
+        .card-answer {
+            margin-top: 8px;
+            color: #ffd700;
+            font-size: 0.85em;
+        }
+        /* 时间戳编辑区域 */
+        .timestamp-editor {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+            padding-top: 8px;
+            border-top: 1px dashed #3d5a3d;
+            flex-wrap: wrap;
+        }
+        .timestamp-label {
+            font-size: 0.75em;
+            color: #6a8a6a;
+            white-space: nowrap;
+        }
+        .timestamp-input {
+            width: 80px;
+            padding: 4px 8px;
+            background: rgba(10, 20, 10, 0.8);
+            border: 1px solid #3d5a3d;
+            border-radius: 4px;
+            color: #8fbc8f;
+            font-size: 0.8em;
+            font-family: monospace;
+            text-align: center;
+        }
+        .timestamp-input:focus {
+            outline: none;
+            border-color: #8fbc8f;
+            box-shadow: 0 0 5px rgba(143, 188, 143, 0.3);
+        }
+        .timestamp-input.modified {
+            border-color: #ffd700;
+            color: #ffd700;
+        }
+        /* 校准完成按钮 */
+        .calibrate-btn {
+            margin-left: auto;
+            padding: 4px 12px;
+            border-radius: 12px;
+            border: 2px solid #555;
+            background: rgba(60, 60, 60, 0.8);
+            color: #888;
+            font-size: 0.8em;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .calibrate-btn:hover {
+            border-color: #228b22;
+            color: #aaa;
+        }
+        .calibrate-btn.calibrated {
+            background: linear-gradient(135deg, #228b22, #1a6b1a);
+            border-color: #32cd32;
+            color: #fff;
+        }
+        .calibrate-btn.calibrated::before {
+            content: '✓ ';
+        }
+        .save-indicator {
+            font-size: 0.7em;
+            color: #4a7a4a;
+        }
+        .save-indicator.saved {
+            color: #8fbc8f;
+        }
+        .back-link {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .back-link a {
+            color: #8fbc8f;
+            text-decoration: none;
+            padding: 10px 25px;
+            border: 1px solid #2d5a2d;
+            border-radius: 20px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .back-link a:hover {
+            border-color: #8fbc8f;
+            background: rgba(45, 90, 45, 0.3);
+        }
+        .help-text {
+            text-align: center;
+            font-size: 0.8em;
+            color: #4a6a4a;
+            margin-bottom: 15px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="question-badge">Part 3 · Situation_K</div>
+            <div class="answer-badge">答案: -</div>
+            <h1>🎧 英検准1级听力点读</h1>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill" style="width: 0%">0% (0/15)</div>
+            </div>
+        </div>
+
+        <div class="audio-player">
+            <audio id="audio" controls>
+                <source src="../Part3_Situation_K.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <p class="help-text">💡 可直接修改时间戳，点击"待校准"按钮标记完成</p>
+
+        <div class="controls">
+            <button class="ctrl-btn active" id="speedBtn" onclick="toggleSpeed()">1.0x</button>
+            <button class="ctrl-btn" id="loopBtn" onclick="toggleLoop()">🔁 单句循环</button>
+            <button class="ctrl-btn" id="transBtn" onclick="toggleTranslation()">📖 只看译文</button>
+            <button class="ctrl-btn" id="hideAnswerBtn" onclick="toggleAnswer()">👁️ 隐藏答案</button>
+            <button class="ctrl-btn" id="exportBtn" onclick="exportToNotion()">📤 导出Notion</button>
+        </div>
+
+        <div id="exportStatus" class="help-text" style="display:none;"></div>
+
+        <div class="sentences" id="sentences">
+
+            <div class="sentence-card" data-start="0" data-end="12260" data-index="1" onclick="playSentence(this)">
+                <span class="speaker">★</span>
+                <div class="en-text">Question number 29.</div>
+                <div class="zh-text">第29题。</div>
+                <div class="timestamp-editor">
+                    <span class="timestamp-label">▶ Start:</span>
+                    <input type="number" class="timestamp-input start-input" value="0" min="0">
+                    <span class="timestamp-label">■ End:</span>
+                    <input type="number" class="timestamp-input end-input" value="12260" min="0">
+                    <button class="calibrate-btn" onclick="event.stopPropagation(); toggleCalibrated(this);">待校准</button>
+                    <span class="save-indicator">自动保存</span>
+                </div>
+            </div>
+
+            <div class="sentence-card" data-start="12360" data-end="16460" data-index="2" onclick="playSentence(this)">
+                <span class="speaker">★</span>
+                <div class="en-text">You should spend the night in Clairville, the halfway point.</div>
+                <div class="zh-text">你应该在克莱尔维尔过夜，那是中途点。</div>
+                <div class="timestamp-editor">
+                    <span class="timestamp-label">▶ Start:</span>
+                    <input type="number" class="timestamp-input start-input" value="12360" min="0">
+                    <span class="timestamp-label">■ End:</span>
+                    <input type="number" class="timestamp-input end-input" value="16460" min="0">
+                    <button class="calibrate-btn" onclick="event.stopPropagation(); toggleCalibrated(this);">待校准</button>
+                    <span class="save-indicator">自动保存</span>
+                </div>
+            </div>
+
+            <div class="sentence-card" data-start="16560" data-end="19380" data-index="3" onclick="playSentence(this)">
+                <span class="speaker">★</span>
+                <div class="en-text">There are some hotels on the main road.</div>
+                <div class="zh-text">主路上有一些酒店。</div>
+                <div class="timestamp-editor">
+                    <span class="timestamp-label">▶ Start:</span>
+                    <input type="number" class="timestamp-input start-input" value="16560" min="0">
+                    <span class="timestamp-label">■ End:</span>
+                    <input type="number" class="timestamp-input end-input" value="19380" min="0">
+                    <button class="calibrate-btn" onclick="event.stopPropagation(); toggleCalibrated(this);">待校准</button>
+                    <span class="save-indicator">自动保存</span>
+                </div>
+            </div>
+
+            <div class="sentence-card" data-start="19480" data-end="21260" data-index="4" onclick="playSentence(this)">
+                <span class="speaker">★</span>
+                <div class="en-text">The Weverton Inn is good.</div>
+                <div class="zh-text">韦弗顿酒店很不错。</div>
+                <div class="timestamp-editor">
+                    <span class="timestamp-label">▶ Start:</span>
+                    <input type="number" class="timestamp-input start-input" value="19480" min="0">
+                    <span class="timestamp-label">■ End:</span>
+                    <input type="number" class="timestamp-input end-input" value="21260" min="0">
+                    <button class="calibrate-btn" onclick="event.stopPropagation(); toggleCalibrated(this);">待校准</button>
+                    <span class="save-indicator">自动保存</span>
+                </div>
+            </div>
+
+            <div class="sentence-card" data-start="21360" data-end="23140" data-index="5" onclick="playSentence(this)">
+                <span class="speaker">★</span>
+                <div class="en-text">It has a nice restaurant.</div>
+                <div class="zh-text">它有一家很好的餐厅。</div>
+                <div class="timestamp-editor">
+                    <span class="timestamp-label">▶ Start:</span>
+                    <input type="number" class="timestamp-input start-input" value="21360" min="0">
+                    <span class="timestamp-label">■ End:</span>
+                    <input type="number" class="timestamp-input end-input" value="23140" min="0">
+                    <button class="calibrate-btn" onclick="event.stopPropagation(); toggleCalibrated(this);">待校准</button>
+                    <span class="save-indicator">自动保存</span>
+                </div>
+            </div>
+
+            <div class="sentence-card" data-start="23240" data-end="28340" data-index="6" onclick="playSentence(this)">
+                <span class="speaker">★</span>
+                <div class="en-text">There's live music at night, though, which could make putting the kids to bed difficult</div>
+                <div class="zh-text">不过晚上有现场音乐，这可能会让哄孩子睡觉变得困难，</div>
+                <div class="timestamp-editor">
+                    <span class="timestamp-label">▶ Start:</span>
+                    <input type="number" class="timestamp-input start-input" value="23240" min="0">
+                    <span class="timestamp-label">■ End:</span>
+                    <input type="number" class="timestamp-input end-input" value="28340" min="0">
+                    <button class="calibrate-btn" onclick="event.stopPropagation(); toggleCalibrated(this);">待校准</button>
+                    <span class="save-indicator">自动保存</span>
+                </div>
+            </div>
+
+            <div class="sentence-card" data-start="28440" data-end="31060" data-index="7" onclick="playSentence(this)">
+                <span class="speaker">★</span>
+                <div class="en-text">as you can hear it from the rooms.</div>
+                <div class="zh-text">因为你能从房间里听到音乐。</div>
+                <div class="timestamp-editor">
+                    <span class="timestamp-label">▶ Start:</span>
+                    <input type="number" class="timestamp-input start-input" value="28440" min="0">
+                    <span class="timestamp-label">■ End:</span>
+                    <input type="number" class="timestamp-input end-input" value="31060" min="0">
+                    <button class="calibrate-btn" onclick="event.stopPropagation(); toggleCalibrated(this);">待校准</button>
+                    <span class="save-indicator">自动保存</span>
+                </div>
+            </div>
+
+            <div class="sentence-card" data-start="31160" data-end="33380" data-index="8" onclick="playSentence(this)">
+                <span class="speaker">★</span>
+                <div class="en-text">I also like the Ridge Motel.</div>
+                <div class="zh-text">我也喜欢里奇汽车旅馆。</div>
+                <div class="timestamp-editor">
+                    <span class="timestamp-label">▶ Start:</span>
+                    <input type="number" class="timestamp-input start-input" value="31160" min="0">
+                    <span class="timestamp-label">■ End:</span>
+                    <input type="number" class="timestamp-input end-input" value="33380" min="0">
+                    <button class="calibrate-btn" onclick="event.stopPropagation(); toggleCalibrated(this);">待校准</button>
+                    <span class="save-indicator">自动保存</span>
+                </div>
+            </div>
+
+            <div class="sentence-card" data-start="33480" data-end="38460" data-index="9" onclick="playSentence(this)">
+                <span class="speaker">★</span>
+                <div class="en-text">It's next door to the Weverton, but you can't hear the noise from the restaurant.</div>
+                <div class="zh-text">它在韦弗顿隔壁，但你听不到餐厅的噪音。</div>
+                <div class="timestamp-editor">
+                    <span class="timestamp-label">▶ Start:</span>
+                    <input type="number" class="timestamp-input start-input" value="33480" min="0">
+                    <span class="timestamp-label">■ End:</span>
+                    <input type="number" class="timestamp-input end-input" value="38460" min="0">
+                    <button class="calibrate-btn" onclick="event.stopPropagation(); toggleCalibrated(this);">待校准</button>
+                    <span class="save-indicator">自动保存</span>
+                </div>
+            </div>
+
+            <div class="sentence-card" data-start="38560" data-end="41940" data-index="10" onclick="playSentence(this)">
+                <span class="speaker">★</span>
+                <div class="en-text">It's too bad the Mountain View Motel closed down recently.</div>
+                <div class="zh-text">很遗憾，山景汽车旅馆最近关门了。</div>
+                <div class="timestamp-editor">
+                    <span class="timestamp-label">▶ Start:</span>
+                    <input type="number" class="timestamp-input start-input" value="38560" min="0">
+                    <span class="timestamp-label">■ End:</span>
+                    <input type="number" class="timestamp-input end-input" value="41940" min="0">
+                    <button class="calibrate-btn" onclick="event.stopPropagation(); toggleCalibrated(this);">待校准</button>
+                    <span class="save-indicator">自动保存</span>
+                </div>
+            </div>
+
+            <div class="sentence-card" data-start="42040" data-end="45260" data-index="11" onclick="playSentence(this)">
+                <span class="speaker">★</span>
+                <div class="en-text">They had a kid's playroom and comfortable beds.</div>
+                <div class="zh-text">他们有儿童游戏室和舒适的床。</div>
+                <div class="timestamp-editor">
+                    <span class="timestamp-label">▶ Start:</span>
+                    <input type="number" class="timestamp-input start-input" value="42040" min="0">
+                    <span class="timestamp-label">■ End:</span>
+                    <input type="number" class="timestamp-input end-input" value="45260" min="0">
+                    <button class="calibrate-btn" onclick="event.stopPropagation(); toggleCalibrated(this);">待校准</button>
+                    <span class="save-indicator">自动保存</span>
+                </div>
+            </div>
+
+            <div class="sentence-card" data-start="45360" data-end="51740" data-index="12" onclick="playSentence(this)">
+                <span class="speaker">★</span>
+                <div class="en-text">I'd also recommend Palm Village Suites, but they only accept adult guests.</div>
+                <div class="zh-text">我也推荐棕榈村套房，但他们只接待成年客人。</div>
+                <div class="timestamp-editor">
+                    <span class="timestamp-label">▶ Start:</span>
+                    <input type="number" class="timestamp-input start-input" value="45360" min="0">
+                    <span class="timestamp-label">■ End:</span>
+                    <input type="number" class="timestamp-input end-input" value="51740" min="0">
+                    <button class="calibrate-btn" onclick="event.stopPropagation(); toggleCalibrated(this);">待校准</button>
+                    <span class="save-indicator">自动保存</span>
+                </div>
+            </div>
+
+            <div class="sentence-card" data-start="51840" data-end="54580" data-index="13" onclick="playSentence(this)">
+                <span class="speaker">★</span>
+                <div class="en-text">Now Markio Ansa on your Ansa sheet.</div>
+                <div class="zh-text">现在请在你的答案纸上标记答案。</div>
+                <div class="timestamp-editor">
+                    <span class="timestamp-label">▶ Start:</span>
+                    <input type="number" class="timestamp-input start-input" value="51840" min="0">
+                    <span class="timestamp-label">■ End:</span>
+                    <input type="number" class="timestamp-input end-input" value="54580" min="0">
+                    <button class="calibrate-btn" onclick="event.stopPropagation(); toggleCalibrated(this);">待校准</button>
+                    <span class="save-indicator">自动保存</span>
+                </div>
+            </div>
+
+            <div class="sentence-card" data-start="57340" data-end="66580" data-index="14" onclick="playSentence(this)">
+                <span class="speaker">★</span>
+                <div class="en-text">Your time is up.</div>
+                <div class="zh-text">你的时间到了。</div>
+                <div class="timestamp-editor">
+                    <span class="timestamp-label">▶ Start:</span>
+                    <input type="number" class="timestamp-input start-input" value="57340" min="0">
+                    <span class="timestamp-label">■ End:</span>
+                    <input type="number" class="timestamp-input end-input" value="66580" min="0">
+                    <button class="calibrate-btn" onclick="event.stopPropagation(); toggleCalibrated(this);">待校准</button>
+                    <span class="save-indicator">自动保存</span>
+                </div>
+            </div>
+
+            <div class="sentence-card" data-start="66680" data-end="66820" data-index="15" onclick="playSentence(this)">
+                <span class="speaker">★</span>
+                <div class="en-text">Stop.</div>
+                <div class="zh-text">停止。</div>
+                <div class="timestamp-editor">
+                    <span class="timestamp-label">▶ Start:</span>
+                    <input type="number" class="timestamp-input start-input" value="66680" min="0">
+                    <span class="timestamp-label">■ End:</span>
+                    <input type="number" class="timestamp-input end-input" value="66820" min="0">
+                    <button class="calibrate-btn" onclick="event.stopPropagation(); toggleCalibrated(this);">待校准</button>
+                    <span class="save-indicator">自动保存</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="back-link">
+            <a href="index.html">← 返回目录</a>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('audio');
+        const sentences = document.querySelectorAll('.sentence-card');
+        const storageKey = 'eiken_calibration_Situation_K';
+        const tsStorageKey = 'eiken_timestamps_Situation_K';
+        let isLoopMode = false;
+        let currentCard = null;
+        let isTranslationMode = false;
+        let isHideAnswer = false;
+        let playbackRate = 1.0;
+
+        // 加载保存的校准状态
+        function loadCalibration() {
+            const saved = localStorage.getItem(storageKey);
+            if (saved) {
+                try {
+                    return JSON.parse(saved);
+                } catch (e) {
+                    return {};
+                }
+            }
+            return {};
+        }
+
+        // 保存校准状态
+        function saveCalibration(index, calibrated) {
+            const data = loadCalibration();
+            data[index] = calibrated;
+            localStorage.setItem(storageKey, JSON.stringify(data));
+            updateProgressBar();
+        }
+
+        // 切换校准状态
+        function toggleCalibrated(btn) {
+            const card = btn.closest('.sentence-card');
+            const index = card.dataset.index;
+            const isCalibrated = btn.classList.contains('calibrated');
+
+            if (isCalibrated) {
+                btn.classList.remove('calibrated');
+                btn.textContent = '待校准';
+                card.classList.remove('calibrated');
+                saveCalibration(index, false);
+            } else {
+                btn.classList.add('calibrated');
+                btn.textContent = '已校准';
+                card.classList.add('calibrated');
+                saveCalibration(index, true);
+            }
+        }
+
+        // 更新进度条
+        function updateProgressBar() {
+            const cards = document.querySelectorAll('.sentence-card');
+            const calibrated = document.querySelectorAll('.sentence-card.calibrated');
+            const pct = cards.length > 0 ? Math.round(calibrated.length / cards.length * 100) : 0;
+            const fill = document.getElementById('progressFill');
+            if (fill) {
+                fill.style.width = pct + '%';
+                fill.textContent = pct + '% (' + calibrated.length + '/' + cards.length + ')';
+            }
+        }
+
+        // 加载保存的时间戳
+        function loadSavedTimestamps() {
+            const saved = localStorage.getItem(tsStorageKey);
+            if (saved) {
+                try {
+                    return JSON.parse(saved);
+                } catch (e) {
+                    return null;
+                }
+            }
+            return null;
+        }
+
+        // 保存时间戳到localStorage
+        function saveTimestamps() {
+            const timestamps = {};
+            document.querySelectorAll('.sentence-card').forEach((card, idx) => {
+                const startInput = card.querySelector('.start-input');
+                const endInput = card.querySelector('.end-input');
+                if (startInput && endInput) {
+                    timestamps[idx] = {
+                        start: parseInt(startInput.value) || 0,
+                        end: parseInt(endInput.value) || 0
+                    };
+                }
+            });
+            localStorage.setItem(tsStorageKey, JSON.stringify(timestamps));
+
+            // 显示保存提示
+            document.querySelectorAll('.save-indicator').forEach(ind => {
+                ind.textContent = '✓ 已保存';
+                ind.classList.add('saved');
+            });
+        }
+
+        // 更新播放卡片的时间戳
+        function updateCardTimestamps(card, idx, savedData) {
+            const startInput = card.querySelector('.start-input');
+            const endInput = card.querySelector('.end-input');
+            const defaultStart = card.dataset.start;
+            const defaultEnd = card.dataset.end;
+
+            if (savedData && savedData[idx]) {
+                startInput.value = savedData[idx].start;
+                endInput.value = savedData[idx].end;
+                startInput.classList.add('modified');
+                endInput.classList.add('modified');
+            } else {
+                startInput.value = defaultStart;
+                endInput.value = defaultEnd;
+            }
+
+            // 监听输入变化
+            [startInput, endInput].forEach(input => {
+                input.addEventListener('change', function() {
+                    saveTimestamps();
+                });
+                input.addEventListener('blur', function() {
+                    saveTimestamps();
+                });
+            });
+        }
+
+        // 从输入框读取时间戳
+        function getTimestampFromCard(card) {
+            const startInput = card.querySelector('.start-input');
+            const endInput = card.querySelector('.end-input');
+            return {
+                start: parseInt(startInput.value) || parseInt(card.dataset.start),
+                end: parseInt(endInput.value) || parseInt(card.dataset.end)
+            };
+        }
+
+        function playSentence(card) {
+            const ts = getTimestampFromCard(card);
+            audio.currentTime = ts.start / 1000;
+            audio.play();
+            document.querySelectorAll('.sentence-card').forEach(c => c.classList.remove('playing', 'loop-playing'));
+            card.classList.add(isLoopMode ? 'loop-playing' : 'playing');
+            currentCard = card;
+        }
+
+        audio.addEventListener('timeupdate', () => {
+            if (isLoopMode && currentCard) {
+                const ts = getTimestampFromCard(currentCard);
+                if (audio.currentTime >= ts.end / 1000) {
+                    audio.currentTime = ts.start / 1000;
+                }
+            }
+            const currentTime = audio.currentTime * 1000;
+            sentences.forEach(card => {
+                const ts = getTimestampFromCard(card);
+                if (currentTime >= ts.start && currentTime < ts.end) {
+                    card.classList.add('playing');
+                } else if (card !== currentCard) {
+                    card.classList.remove('playing');
+                }
+            });
+        });
+
+        function toggleLoop() {
+            isLoopMode = !isLoopMode;
+            document.getElementById('loopBtn').classList.toggle('loop-active', isLoopMode);
+            document.getElementById('loopBtn').classList.toggle('active', isLoopMode);
+        }
+
+        function toggleSpeed() {
+            playbackRate = playbackRate === 1.0 ? 1.2 : 1.0;
+            audio.playbackRate = playbackRate;
+            document.getElementById('speedBtn').textContent = playbackRate + 'x';
+        }
+
+        function toggleTranslation() {
+            isTranslationMode = !isTranslationMode;
+            document.body.classList.toggle('translation-mode', isTranslationMode);
+            document.getElementById('transBtn').classList.toggle('active', isTranslationMode);
+        }
+
+        function toggleAnswer() {
+            isHideAnswer = !isHideAnswer;
+            document.body.classList.toggle('hide-answer', isHideAnswer);
+            document.getElementById('hideAnswerBtn').classList.toggle('active', isHideAnswer);
+        }
+
+        // 页面加载时初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 加载校准状态
+            const calData = loadCalibration();
+            document.querySelectorAll('.sentence-card').forEach(card => {
+                const index = card.dataset.index;
+                const btn = card.querySelector('.calibrate-btn');
+                if (calData[index]) {
+                    btn.classList.add('calibrated');
+                    btn.textContent = '已校准';
+                    card.classList.add('calibrated');
+                }
+            });
+            updateProgressBar();
+
+            // 加载时间戳
+            const savedTimestamps = loadSavedTimestamps();
+            document.querySelectorAll('.sentence-card').forEach((card, idx) => {
+                updateCardTimestamps(card, idx, savedTimestamps);
+            });
+        });
+    
+                // 导出到Notion Markdown
+        function exportToNotion() {
+            const cards = document.querySelectorAll('.sentence-card');
+            const situationId = document.querySelector('.question-badge')?.textContent?.replace('Situation ', '').trim() || 'G';
+            const statusEl = document.getElementById('exportStatus');
+
+            // 显示状态
+            if (statusEl) {
+                statusEl.style.display = 'block';
+                statusEl.textContent = '⏳ 正在生成文件...';
+            }
+
+            // 构建表格行
+            let rows = [];
+            cards.forEach(card => {
+                const index = card.dataset.index;
+                const speaker = card.querySelector('.speaker')?.textContent?.trim() || '';
+                const enText = card.querySelector('.en-text')?.textContent?.trim() || '';
+                const zhText = card.querySelector('.zh-text')?.textContent?.trim() || '';
+                const startInput = card.querySelector('.start-input');
+                const endInput = card.querySelector('.end-input');
+                const start = startInput?.value || card.dataset.start;
+                const end = endInput?.value || card.dataset.end;
+                const calBtn = card.querySelector('.calibrate-btn');
+                const isCalibrated = calBtn?.classList.contains('calibrated');
+
+                const calibratedMark = isCalibrated ? '✅' : '❌';
+                const timestampRange = start + 'ms-' + end + 'ms';
+
+                rows.push('| ' + index + ' | ' + speaker + ' | ' + timestampRange + ' | ' + enText + ' | ' + zhText + ' | ' + calibratedMark + ' |');
+            });
+
+            // 构建完整Markdown
+            const md = '# Situation ' + situationId + '\n\n---\n\n## 听力原文\n\n**音频：** `Part3_Situation_' + situationId + '.mp3`\n\n| 序号 | 说话人 | 时间范围 | 英文原文 | 中文翻译 | 校准 |\n|------|--------|----------|----------|----------|------|\n' + rows.join('\n') + '\n\n---\n\n*点击时间范围可跳转到对应音频位置*\n*校准标记：✅ 已校准 / ❌ 待校准*';
+
+            // 创建下载
+            const blob = new Blob([md], { type: 'text/markdown;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Situation_' + situationId + '.md';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            // 显示成功状态
+            if (statusEl) {
+                statusEl.textContent = '✅ 导出完成！文件已下载';
+                setTimeout(() => { statusEl.style.display = 'none'; }, 3000);
+            }
+        }
+
+
+
+</script>
+
+</body>
+</html>

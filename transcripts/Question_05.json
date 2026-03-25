@@ -1,0 +1,78 @@
+{
+  "question_id": "05番",
+  "audio_file": "Part1_05番.mp3",
+  "answer": "2",
+  "total_duration_sec": 40.32,
+  "segments": [
+    {
+      "index": 1,
+      "speaker": "☆",
+      "start": 0,
+      "end": 7440,
+      "en": "Did you see the local news last night? There was a story about a missing dog.",
+      "zh": "你昨晚看本地新闻了吗？有一条关于失踪狗狗的报道。",
+      "original_start": 0,
+      "original_end": 7440
+    },
+    {
+      "index": 2,
+      "speaker": "★★",
+      "start": 6290,
+      "end": 14800,
+      "en": "No, I didn't. What happened?",
+      "zh": "没有，怎么了？",
+      "original_start": 7490,
+      "original_end": 14800
+    },
+    {
+      "index": 3,
+      "speaker": "☆",
+      "start": 13650,
+      "end": 18520,
+      "en": "Well, someone reported their dog missing to the police. The dog had been gone for a week before they realized it.",
+      "zh": "嗯，有人向警察报案说他们的狗失踪了。那只狗走丢了一周后主人才发现。",
+      "original_start": 14850,
+      "original_end": 18520
+    },
+    {
+      "index": 4,
+      "speaker": "★★",
+      "start": 17370,
+      "end": 26600,
+      "en": "That's awful. Was it found?",
+      "zh": "太糟糕了。找到了吗？",
+      "original_start": 18570,
+      "original_end": 26600
+    },
+    {
+      "index": 5,
+      "speaker": "☆",
+      "start": 25450,
+      "end": 33960,
+      "en": "Yes. It turned out the dog had been staying at the neighbor's house the whole time. It had gotten out through a hole in the fence.",
+      "zh": "找到了。原来那只狗一直待在邻居家。它是从篱笆上的一个洞钻出去的。",
+      "original_start": 26650,
+      "original_end": 33960
+    },
+    {
+      "index": 6,
+      "speaker": "★★",
+      "start": 32810,
+      "end": 37560,
+      "en": "What a relief. I hope they fixed the fence.",
+      "zh": "真是松了口气。希望他们把篱笆修好了。",
+      "original_start": 34010,
+      "original_end": 37560
+    },
+    {
+      "index": 7,
+      "speaker": "☆",
+      "start": 36410,
+      "end": 40320,
+      "en": "Question: Where was the missing dog found?",
+      "zh": "问题：失踪的狗是在哪里找到的？",
+      "original_start": 37610,
+      "original_end": 40320
+    }
+  ]
+}

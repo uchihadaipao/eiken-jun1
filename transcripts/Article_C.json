@@ -1,0 +1,178 @@
+{
+  "question_id": "Article_C",
+  "audio_file": "Part2_Article_C.mp3",
+  "answer": "-",
+  "total_duration_sec": 105.0,
+  "segments": [
+    {
+      "index": 1,
+      "speaker": "★",
+      "start": 0,
+      "end": 5000,
+      "en": "See",
+      "zh": "请看",
+      "original_start": 0,
+      "original_end": 5000
+    },
+    {
+      "index": 2,
+      "speaker": "★",
+      "start": 5100,
+      "end": 8000,
+      "en": "Edison's Talking Dolls",
+      "zh": "爱迪生的会说话娃娃",
+      "original_start": 5000,
+      "original_end": 8000
+    },
+    {
+      "index": 3,
+      "speaker": "★",
+      "start": 8100,
+      "end": 14000,
+      "en": "Thomas Edison developed a technique for recording sound in the late 1800s.",
+      "zh": "See",
+      "original_start": 8000,
+      "original_end": 14000
+    },
+    {
+      "index": 4,
+      "speaker": "★",
+      "start": 14100,
+      "end": 21000,
+      "en": "One application of his invention was the phonograph, which eventually evolved into the record player.",
+      "zh": "托马斯·爱迪生在1800年代末开发了一种录音技术。",
+      "original_start": 14000,
+      "original_end": 21000
+    },
+    {
+      "index": 5,
+      "speaker": "★",
+      "start": 21100,
+      "end": 28000,
+      "en": "Less well known, however, are his Talking Dolls, which were among the first Talking Dolls ever made.",
+      "zh": "他发明的一个应用是留声机，它最终演变成了电唱机。",
+      "original_start": 21000,
+      "original_end": 28000
+    },
+    {
+      "index": 6,
+      "speaker": "★",
+      "start": 28100,
+      "end": 36000,
+      "en": "They contained wax records, and when the handles in their backs were turned, they played familiar children's songs or poems.",
+      "zh": "然而，不太为人所知的是他的会说话的娃娃，这是最早制造的会说话的娃娃之一。",
+      "original_start": 28000,
+      "original_end": 36000
+    },
+    {
+      "index": 7,
+      "speaker": "★",
+      "start": 36100,
+      "end": 45000,
+      "en": "Unfortunately, due to technological limitations, the words were barely understandable, and many children found the dolls frightening.",
+      "zh": "这些娃娃里面装有蜡筒唱片，当转动背面的把手时，它们会播放熟悉的儿童歌曲或诗歌。",
+      "original_start": 36000,
+      "original_end": 45000
+    },
+    {
+      "index": 8,
+      "speaker": "★",
+      "start": 45100,
+      "end": 49000,
+      "en": "Edison soon gave up on manufacturing the dolls.",
+      "zh": "不幸的是，由于技术限制，这些话几乎听不清楚，许多孩子觉得这些娃娃很可怕。",
+      "original_start": 45000,
+      "original_end": 49000
+    },
+    {
+      "index": 9,
+      "speaker": "★",
+      "start": 49100,
+      "end": 56000,
+      "en": "Though Talking Dolls are extremely common today, Edison's were among his greatest failures.",
+      "zh": "爱迪生很快就放弃了制造这种娃娃。",
+      "original_start": 49000,
+      "original_end": 56000
+    },
+    {
+      "index": 10,
+      "speaker": "★",
+      "start": 56100,
+      "end": 65000,
+      "en": "Technology expert Carlene Stevens says the dolls are an example of the downside of racing to implement new technologies.",
+      "zh": "虽然现在会说话的娃娃非常普遍，但爱迪生的娃娃却是他最大的失败之一。",
+      "original_start": 56000,
+      "original_end": 65000
+    },
+    {
+      "index": 11,
+      "speaker": "★",
+      "start": 65100,
+      "end": 70000,
+      "en": "While being first, sometimes allows one to gain control of a market.",
+      "zh": "技术专家卡琳·史蒂文斯说，这些娃娃是急于采用新技术的负面例子的一个例子。",
+      "original_start": 65000,
+      "original_end": 70000
+    },
+    {
+      "index": 12,
+      "speaker": "★",
+      "start": 70100,
+      "end": 79000,
+      "en": "It is often necessary to delay a product's launch until the technology has advanced sufficiently to make it attractive to consumers.",
+      "zh": "虽然成为第一有时能让你获得市场控制权，但新技术往往需要更多时间才能真正对消费者有吸引力。",
+      "original_start": 70000,
+      "original_end": 79000
+    },
+    {
+      "index": 13,
+      "speaker": "★",
+      "start": 79000,
+      "end": 81000,
+      "en": "Questions",
+      "zh": "问题。",
+      "original_start": 80000,
+      "original_end": 81000
+    },
+    {
+      "index": 14,
+      "speaker": "★",
+      "start": 81100,
+      "end": 83000,
+      "en": "Number 17",
+      "zh": "第17题。",
+      "original_start": 81000,
+      "original_end": 83000
+    },
+    {
+      "index": 15,
+      "speaker": "★",
+      "start": 83100,
+      "end": 89000,
+      "en": "What was one problem with Thomas Edison's Talking Dolls?",
+      "zh": "托马斯·爱迪生的会说话的娃娃有什么问题？",
+      "original_start": 83000,
+      "original_end": 89000
+    },
+    {
+      "index": 16,
+      "speaker": "★",
+      "start": 96000,
+      "end": 99000,
+      "en": "Number 18",
+      "zh": "第18题。",
+      "original_start": 97000,
+      "original_end": 99000
+    },
+    {
+      "index": 17,
+      "speaker": "★",
+      "start": 99100,
+      "end": 105000,
+      "en": "What does Carlene Stevens suggest about the Talking Dolls?",
+      "zh": "卡琳·史蒂文斯对会说话的娃娃有什么建议？",
+      "original_start": 99000,
+      "original_end": 105000
+    }
+  ]
+}

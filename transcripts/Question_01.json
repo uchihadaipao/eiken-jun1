@@ -1,0 +1,88 @@
+{
+  "question_id": "01番",
+  "audio_file": "Part1_01番.mp3",
+  "answer": "2",
+  "total_duration_sec": 39.16,
+  "segments": [
+    {
+      "index": 1,
+      "speaker": "★",
+      "start": 0,
+      "end": 7280,
+      "en": "You look really stressed. What's up?",
+      "zh": "你看起来压力很大。怎么了？",
+      "original_start": 0,
+      "original_end": 7280
+    },
+    {
+      "index": 2,
+      "speaker": "☆☆",
+      "start": 6130,
+      "end": 15320,
+      "en": "I'm way behind on writing this article about American composers. I'm not sure I can make tomorrow's deadline.",
+      "zh": "我写这篇关于美国作曲家的文章落后太多了。我不确定能不能赶上明天的截止日期。",
+      "original_start": 7330,
+      "original_end": 15320
+    },
+    {
+      "index": 3,
+      "speaker": "★",
+      "start": 14170,
+      "end": 18240,
+      "en": "Let me give you a hand.",
+      "zh": "我来帮你吧。",
+      "original_start": 15370,
+      "original_end": 18240
+    },
+    {
+      "index": 4,
+      "speaker": "☆☆",
+      "start": 17090,
+      "end": 21360,
+      "en": "Really? That'd be fantastic. Thanks.",
+      "zh": "真的吗？那太好了。谢谢。",
+      "original_start": 18290,
+      "original_end": 21360
+    },
+    {
+      "index": 5,
+      "speaker": "★",
+      "start": 20210,
+      "end": 25080,
+      "en": "Not a problem. I've been in your situation before.",
+      "zh": "不客气。我以前也遇到过这种情况。",
+      "original_start": 21410,
+      "original_end": 25080
+    },
+    {
+      "index": 6,
+      "speaker": "☆☆",
+      "start": 23930,
+      "end": 29960,
+      "en": "Would you mind doing some fact-checking? I need to confirm my sources.",
+      "zh": "你介意做一下事实核查吗？我需要确认我的资料来源。",
+      "original_start": 25130,
+      "original_end": 29960
+    },
+    {
+      "index": 7,
+      "speaker": "★",
+      "start": 28810,
+      "end": 36040,
+      "en": "Not at all. Just let me read the draft first, and then I'll get on it.",
+      "zh": "一点也不介意。让我先看看草稿，然后我来做。",
+      "original_start": 30010,
+      "original_end": 36040
+    },
+    {
+      "index": 8,
+      "speaker": "☆",
+      "start": 34890,
+      "end": 39160,
+      "en": "Question: Why is the woman concerned?",
+      "zh": "问题：这位女士为什么担心？",
+      "original_start": 36090,
+      "original_end": 39160
+    }
+  ]
+}

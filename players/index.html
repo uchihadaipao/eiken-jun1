@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英検准1级听力点读 - 2023年第3回</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a2f1a 0%, #0d1a0d 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 30px;
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(45, 90, 45, 0.2);
+            border-radius: 15px;
+            border: 1px solid #3d7a3d;
+        }
+        .header h1 { color: #8fbc8f; font-size: 1.8em; margin-bottom: 8px; }
+        .header p { color: #6a8a6a; font-size: 1em; }
+        
+        /* Part 选择器 */
+        .part-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+        .part-tab {
+            padding: 12px 30px;
+            border-radius: 25px;
+            background: rgba(30, 60, 30, 0.8);
+            border: 2px solid #2d5a2d;
+            color: #6a8a6a;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        .part-tab:hover {
+            border-color: #8fbc8f;
+            color: #8fbc8f;
+        }
+        .part-tab.active {
+            background: linear-gradient(135deg, #2d5a2d, #1a3d1a);
+            border-color: #8fbc8f;
+            color: #8fbc8f;
+            box-shadow: 0 0 15px rgba(143, 188, 143, 0.3);
+        }
+        
+        .part-section { margin-bottom: 40px; }
+        .part-title {
+            font-size: 1.2em;
+            color: #8fbc8f;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 3px solid #8fbc8f;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 12px;
+        }
+        .card {
+            background: rgba(20, 40, 20, 0.9);
+            border-radius: 12px;
+            padding: 18px;
+            border: 1px solid #2d5a2d;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #8fbc8f;
+            box-shadow: 0 5px 20px rgba(143, 188, 143, 0.2);
+        }
+        .card-num {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #8fbc8f;
+            margin-bottom: 6px;
+        }
+        .card-preview {
+            font-size: 0.8em;
+            color: #6a8a6a;
+            line-height: 1.4;
+            max-height: 2.5em;
+            overflow: hidden;
+        }
+        .card-answer {
+            margin-top: 8px;
+            font-size: 0.85em;
+            color: #ffd700;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #2d3d2d;
+            color: #4a6a4a;
+            font-size: 0.85em;
+        }
+        
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎧 英検准1级听力点读</h1>
+            <p>2023年第3回 · 听力試験</p>
+        </div>
+        
+        <!-- Part 选择器 -->
+        <div class="part-tabs">
+            <span class="part-tab active" onclick="showPart('part1')">📖 Part 1</span>
+            <span class="part-tab" onclick="showPart('part2')">📝 Part 2</span>
+            <span class="part-tab" onclick="showPart('part3')">🎤 Part 3</span>
+        </div>
+        
+        <!-- Part 1: 会話 -->
+        <div id="part1" class="part-section">
+            <div class="part-title">📖 Part 1：会話（Questions 1-12）</div>
+            <div class="grid">
+                <a href="player_01.html" class="card">
+                    <div class="card-num">第1番</div>
+                    <div class="card-preview">You look really stressed...</div>
+                    <div class="card-answer">答案: 2</div>
+                </a>
+                <a href="player_02.html" class="card">
+                    <div class="card-num">第2番</div>
+                    <div class="card-preview">Jared, I got a phone call...</div>
+                    <div class="card-answer">答案: 3</div>
+                </a>
+                <a href="player_03.html" class="card">
+                    <div class="card-num">第3番</div>
+                    <div class="card-preview">Why did we ever encourage...</div>
+                    <div class="card-answer">答案: 2</div>
+                </a>
+                <a href="player_04.html" class="card">
+                    <div class="card-num">第4番</div>
+                    <div class="card-preview">Have you been to the new...</div>
+                    <div class="card-answer">答案: 1</div>
+                </a>
+                <a href="player_05.html" class="card">
+                    <div class="card-num">第5番</div>
+                    <div class="card-preview">Did you see the local news...</div>
+                    <div class="card-answer">答案: 2</div>
+                </a>
+                <a href="player_06.html" class="card">
+                    <div class="card-num">第6番</div>
+                    <div class="card-preview">Excuse me, do you know...</div>
+                    <div class="card-answer">答案: 4</div>
+                </a>
+                <a href="player_07.html" class="card">
+                    <div class="card-num">第7番</div>
+                    <div class="card-preview">I just heard there's a new...</div>
+                    <div class="card-answer">答案: 2</div>
+                </a>
+                <a href="player_08.html" class="card">
+                    <div class="card-num">第8番</div>
+                    <div class="card-preview">What happened to the plants...</div>
+                    <div class="card-answer">答案: 3</div>
+                </a>
+                <a href="player_09.html" class="card">
+                    <div class="card-num">第9番</div>
+                    <div class="card-preview">How's the planning going...</div>
+                    <div class="card-answer">答案: 1</div>
+                </a>
+                <a href="player_10.html" class="card">
+                    <div class="card-num">第10番</div>
+                    <div class="card-preview">George, the boss is looking...</div>
+                    <div class="card-answer">答案: 1</div>
+                </a>
+                <a href="player_11.html" class="card">
+                    <div class="card-num">第11番</div>
+                    <div class="card-preview">Did you see that documentary...</div>
+                    <div class="card-answer">答案: 4</div>
+                </a>
+                <a href="player_12.html" class="card">
+                    <div class="card-num">第12番</div>
+                    <div class="card-preview">Have you submitted your...</div>
+                    <div class="card-answer">答案: 3</div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Part 2: 短文 -->
+        <div id="part2" class="part-section hidden">
+            <div class="part-title">📝 Part 2：短文理解（Questions 13-24）</div>
+            <div class="grid">
+                <a href="player_Article_A.html" class="card">
+                    <div class="card-num">短文 A</div>
+                    <div class="card-preview">Typhon was one of the most terrifying...</div>
+                    <div class="card-answer">答案: -</div>
+                </a>
+                <a href="player_Article_B.html" class="card">
+                    <div class="card-num">短文 B</div>
+                    <div class="card-preview">Have you ever wondered why...</div>
+                    <div class="card-answer">答案: -</div>
+                </a>
+                <a href="player_Article_C.html" class="card">
+                    <div class="card-num">短文 C</div>
+                    <div class="card-preview">Good evening and welcome...</div>
+                    <div class="card-answer">答案: -</div>
+                </a>
+                <a href="player_Article_D.html" class="card">
+                    <div class="card-num">短文 D</div>
+                    <div class="card-preview">Welcome to tonight's program...</div>
+                    <div class="card-answer">答案: -</div>
+                </a>
+                <a href="player_Article_E.html" class="card">
+                    <div class="card-num">短文 E</div>
+                    <div class="card-preview">Thank you for calling...</div>
+                    <div class="card-answer">答案: -</div>
+                </a>
+                <a href="player_Article_F.html" class="card">
+                    <div class="card-num">短文 F</div>
+                    <div class="card-preview">Hi, I'm Dr. Sarah Chen...</div>
+                    <div class="card-answer">答案: -</div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Part 3: 実景 -->
+        <div id="part3" class="part-section hidden">
+            <div class="part-title">🎤 Part 3：実戦会話（Questions 25-39）</div>
+            <div class="grid">
+                <a href="player_Situation_G.html" class="card">
+                    <div class="card-num">状況 G</div>
+                    <div class="card-preview">You will hear a conversation...</div>
+                    <div class="card-answer">答案: -</div>
+                </a>
+                <a href="player_Situation_H.html" class="card">
+                    <div class="card-num">状況 H</div>
+                    <div class="card-preview">You will hear an announcement...</div>
+                    <div class="card-answer">答案: -</div>
+                </a>
+                <a href="player_Situation_I.html" class="card">
+                    <div class="card-num">状況 I</div>
+                    <div class="card-preview">You will hear a phone call...</div>
+                    <div class="card-answer">答案: -</div>
+                </a>
+                <a href="player_Situation_J.html" class="card">
+                    <div class="card-num">状況 J</div>
+                    <div class="card-preview">You will hear a news report...</div>
+                    <div class="card-answer">答案: -</div>
+                </a>
+                <a href="player_Situation_K.html" class="card">
+                    <div class="card-num">状況 K</div>
+                    <div class="card-preview">You will hear a dialogue...</div>
+                    <div class="card-answer">答案: -</div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>🎧 Whisper精确对齐 · 1.0秒前缓冲 · 支持单句循环</p>
+            <p style="margin-top: 5px;">Part 2 & Part 3 答案待填入</p>
+        </div>
+    </div>
+    
+    <script>
+        function showPart(partId) {
+            // 隐藏所有Part
+            var sections = document.getElementsByClassName('part-section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none';
+            }
+            
+            // 显示选中的Part
+            var selected = document.getElementById(partId);
+            if (selected) {
+                selected.style.display = 'block';
+            }
+            
+            // 更新Tab样式
+            var tabs = document.getElementsByClassName('part-tab');
+            for (var j = 0; j < tabs.length; j++) {
+                tabs[j].classList.remove('active');
+            }
+            event.target.classList.add('active');
+        }
+        
+        // 页面加载时显示Part 1
+        document.addEventListener('DOMContentLoaded', function() {
+            var sections = document.getElementsByClassName('part-section');
+            for (var i = 0; i < sections.length; i++) {
+                if (sections[i].id !== 'part1') {
+                    sections[i].style.display = 'none';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

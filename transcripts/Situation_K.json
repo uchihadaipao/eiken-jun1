@@ -1,0 +1,158 @@
+{
+  "question_id": "Situation_K",
+  "audio_file": "Part3_Situation_K.mp3",
+  "answer": "-",
+  "total_duration_sec": 66.82,
+  "segments": [
+    {
+      "index": 1,
+      "speaker": "★",
+      "start": 0,
+      "end": 12260,
+      "en": "Question number 29.",
+      "zh": "第29题。",
+      "original_start": 0,
+      "original_end": 12260
+    },
+    {
+      "index": 2,
+      "speaker": "★",
+      "start": 12360,
+      "end": 16460,
+      "en": "You should spend the night in Clairville, the halfway point.",
+      "zh": "你应该在克莱尔维尔过夜，那是中途点。",
+      "original_start": 12260,
+      "original_end": 16460
+    },
+    {
+      "index": 3,
+      "speaker": "★",
+      "start": 16560,
+      "end": 19380,
+      "en": "There are some hotels on the main road.",
+      "zh": "主路上有一些酒店。",
+      "original_start": 16460,
+      "original_end": 19380
+    },
+    {
+      "index": 4,
+      "speaker": "★",
+      "start": 19480,
+      "end": 21260,
+      "en": "The Weverton Inn is good.",
+      "zh": "韦弗顿酒店很不错。",
+      "original_start": 19380,
+      "original_end": 21260
+    },
+    {
+      "index": 5,
+      "speaker": "★",
+      "start": 21360,
+      "end": 23140,
+      "en": "It has a nice restaurant.",
+      "zh": "它有一家很好的餐厅。",
+      "original_start": 21260,
+      "original_end": 23140
+    },
+    {
+      "index": 6,
+      "speaker": "★",
+      "start": 23240,
+      "end": 28340,
+      "en": "There's live music at night, though, which could make putting the kids to bed difficult",
+      "zh": "不过晚上有现场音乐，这可能会让哄孩子睡觉变得困难，",
+      "original_start": 23140,
+      "original_end": 28340
+    },
+    {
+      "index": 7,
+      "speaker": "★",
+      "start": 28440,
+      "end": 31060,
+      "en": "as you can hear it from the rooms.",
+      "zh": "因为你能从房间里听到音乐。",
+      "original_start": 28340,
+      "original_end": 31060
+    },
+    {
+      "index": 8,
+      "speaker": "★",
+      "start": 31160,
+      "end": 33380,
+      "en": "I also like the Ridge Motel.",
+      "zh": "我也喜欢里奇汽车旅馆。",
+      "original_start": 31060,
+      "original_end": 33380
+    },
+    {
+      "index": 9,
+      "speaker": "★",
+      "start": 33480,
+      "end": 38460,
+      "en": "It's next door to the Weverton, but you can't hear the noise from the restaurant.",
+      "zh": "它在韦弗顿隔壁，但你听不到餐厅的噪音。",
+      "original_start": 33380,
+      "original_end": 38460
+    },
+    {
+      "index": 10,
+      "speaker": "★",
+      "start": 38560,
+      "end": 41940,
+      "en": "It's too bad the Mountain View Motel closed down recently.",
+      "zh": "很遗憾，山景汽车旅馆最近关门了。",
+      "original_start": 38460,
+      "original_end": 41940
+    },
+    {
+      "index": 11,
+      "speaker": "★",
+      "start": 42040,
+      "end": 45260,
+      "en": "They had a kid's playroom and comfortable beds.",
+      "zh": "他们有儿童游戏室和舒适的床。",
+      "original_start": 41940,
+      "original_end": 45260
+    },
+    {
+      "index": 12,
+      "speaker": "★",
+      "start": 45360,
+      "end": 51740,
+      "en": "I'd also recommend Palm Village Suites, but they only accept adult guests.",
+      "zh": "我也推荐棕榈村套房，但他们只接待成年客人。",
+      "original_start": 45260,
+      "original_end": 51740
+    },
+    {
+      "index": 13,
+      "speaker": "★",
+      "start": 51840,
+      "end": 54580,
+      "en": "Now Markio Ansa on your Ansa sheet.",
+      "zh": "现在请在你的答案纸上标记答案。",
+      "original_start": 51740,
+      "original_end": 54580
+    },
+    {
+      "index": 14,
+      "speaker": "★",
+      "start": 57340,
+      "end": 66580,
+      "en": "Your time is up.",
+      "zh": "你的时间到了。",
+      "original_start": 58340,
+      "original_end": 66580
+    },
+    {
+      "index": 15,
+      "speaker": "★",
+      "start": 66680,
+      "end": 66820,
+      "en": "Stop.",
+      "zh": "停止。",
+      "original_start": 66580,
+      "original_end": 66820
+    }
+  ]
+}

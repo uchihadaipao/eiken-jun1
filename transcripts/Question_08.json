@@ -1,0 +1,78 @@
+{
+  "question_id": "08番",
+  "audio_file": "Part1_08番.mp3",
+  "answer": "3",
+  "total_duration_sec": 44.2,
+  "segments": [
+    {
+      "index": 1,
+      "speaker": "★",
+      "start": 0,
+      "end": 9440,
+      "en": "What happened to the plants in the front yard? Half of them have been dug up.",
+      "zh": "前院的植物怎么了？有一半被挖掉了。",
+      "original_start": 0,
+      "original_end": 9440
+    },
+    {
+      "index": 2,
+      "speaker": "☆☆",
+      "start": 8290,
+      "end": 14080,
+      "en": "Oh, the garden? The landlord had them removed. He said they're not suitable for this climate.",
+      "zh": "哦，那个花园？房东让人把它们移走了。他说它们不适合这里的气候。",
+      "original_start": 9490,
+      "original_end": 14080
+    },
+    {
+      "index": 3,
+      "speaker": "★",
+      "start": 12930,
+      "end": 21560,
+      "en": "That's a shame. They looked so healthy.",
+      "zh": "真可惜。它们看起来很健康啊。",
+      "original_start": 14130,
+      "original_end": 21560
+    },
+    {
+      "index": 4,
+      "speaker": "☆☆",
+      "start": 20410,
+      "end": 28840,
+      "en": "I know. They were really pretty. He said he'll put in some native plants that are easier to maintain.",
+      "zh": "我知道。它们确实很漂亮。他说会种一些更容易维护的本地植物。",
+      "original_start": 21610,
+      "original_end": 28840
+    },
+    {
+      "index": 5,
+      "speaker": "★",
+      "start": 27690,
+      "end": 36760,
+      "en": "Well, at least we won't have to water them as often.",
+      "zh": "嗯，至少我们不用那么频繁地浇水了。",
+      "original_start": 28890,
+      "original_end": 36760
+    },
+    {
+      "index": 6,
+      "speaker": "☆☆",
+      "start": 35610,
+      "end": 39880,
+      "en": "That's true. And they'll be better for the environment too.",
+      "zh": "说得对。而且它们对环境也更好。",
+      "original_start": 36810,
+      "original_end": 39880
+    },
+    {
+      "index": 7,
+      "speaker": "★",
+      "start": 38730,
+      "end": 44200,
+      "en": "Question: Why were the plants removed?",
+      "zh": "问题：为什么植物被移走了？",
+      "original_start": 39930,
+      "original_end": 44200
+    }
+  ]
+}

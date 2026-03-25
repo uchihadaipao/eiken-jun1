@@ -1,0 +1,78 @@
+{
+  "question_id": "09番",
+  "audio_file": "Part1_09番.mp3",
+  "answer": "1",
+  "total_duration_sec": 43.7,
+  "segments": [
+    {
+      "index": 1,
+      "speaker": "★★",
+      "start": 0,
+      "end": 9260,
+      "en": "How's the planning going for your trip to Italy?",
+      "zh": "你意大利之行的计划进展得怎么样了？",
+      "original_start": 0,
+      "original_end": 9260
+    },
+    {
+      "index": 2,
+      "speaker": "☆",
+      "start": 8110,
+      "end": 20340,
+      "en": "OK, but I'm having trouble deciding where to stay.",
+      "zh": "还行，但我在决定住哪里方面遇到了困难。",
+      "original_start": 9310,
+      "original_end": 20340
+    },
+    {
+      "index": 3,
+      "speaker": "★★",
+      "start": 19190,
+      "end": 29500,
+      "en": "What about that hotel you stayed at last time? The one near the train station?",
+      "zh": "你上次住的那家酒店怎么样？就是火车站附近的那家？",
+      "original_start": 20390,
+      "original_end": 29500
+    },
+    {
+      "index": 4,
+      "speaker": "☆",
+      "start": 28350,
+      "end": 30500,
+      "en": "It was OK, but I'd like to stay somewhere more central this time. That way I can walk to most of the attractions.",
+      "zh": "还行，但这次我想住在更中心的地方。这样我就可以走路去大多数景点。",
+      "original_start": 29550,
+      "original_end": 30500
+    },
+    {
+      "index": 5,
+      "speaker": "★★",
+      "start": 29350,
+      "end": 38380,
+      "en": "Have you looked into any apartment rentals? They can be a good deal if you're staying for a while.",
+      "zh": "你查过公寓租赁吗？如果你待得久的话，可能很划算。",
+      "original_start": 30550,
+      "original_end": 38380
+    },
+    {
+      "index": 6,
+      "speaker": "☆",
+      "start": 37230,
+      "end": 41420,
+      "en": "Good idea. I'll check online.",
+      "zh": "好主意。我上网查查。",
+      "original_start": 38430,
+      "original_end": 41420
+    },
+    {
+      "index": 7,
+      "speaker": "★★",
+      "start": 40270,
+      "end": 43700,
+      "en": "Question: What does the man suggest?",
+      "zh": "问题：这位男士建议什么？",
+      "original_start": 41470,
+      "original_end": 43700
+    }
+  ]
+}

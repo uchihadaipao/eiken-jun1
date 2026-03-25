@@ -1,0 +1,158 @@
+{
+  "question_id": "Article_F",
+  "audio_file": "Part2_Article_F.mp3",
+  "answer": "-",
+  "total_duration_sec": 103.24,
+  "segments": [
+    {
+      "index": 1,
+      "speaker": "★",
+      "start": 0,
+      "end": 7880,
+      "en": "F. Illegal Fishing Researchers have found a possible method",
+      "zh": "F.",
+      "original_start": 0,
+      "original_end": 7880
+    },
+    {
+      "index": 2,
+      "speaker": "★",
+      "start": 7980,
+      "end": 13320,
+      "en": "for detecting illegal fishing by using seabirds called albatrosses.",
+      "zh": "利用一种叫做信天翁的海鸟来检测非法捕鱼。",
+      "original_start": 7880,
+      "original_end": 13320
+    },
+    {
+      "index": 3,
+      "speaker": "★",
+      "start": 13420,
+      "end": 20720,
+      "en": "First, the equipped albatrosses with miniature GPS devices and radar detectors.",
+      "zh": "首先，给信天翁配备微型GPS设备和雷达探测器。",
+      "original_start": 13320,
+      "original_end": 20720
+    },
+    {
+      "index": 4,
+      "speaker": "★",
+      "start": 20820,
+      "end": 28200,
+      "en": "Most fishing boats use devices known as automatic identification systems or AIS, which transmit",
+      "zh": "大多数渔船使用被称为自动识别系统（AIS）的设备，该系统会向卫星传输它们的位置。",
+      "original_start": 20720,
+      "original_end": 28200
+    },
+    {
+      "index": 5,
+      "speaker": "★",
+      "start": 28300,
+      "end": 35360,
+      "en": "their positions to satellites. However, illegal fishing boats often shut the AIS off to",
+      "zh": "然而，非法捕鱼船经常关闭AIS来隐藏它们的位置，但为了导航而保持雷达开启。",
+      "original_start": 28200,
+      "original_end": 35360
+    },
+    {
+      "index": 6,
+      "speaker": "★",
+      "start": 35460,
+      "end": 40440,
+      "en": "hide their locations but keep their radars on for navigation.",
+      "zh": "隐藏它们的位置，但为了导航而保持雷达开启。",
+      "original_start": 35360,
+      "original_end": 40440
+    },
+    {
+      "index": 7,
+      "speaker": "★",
+      "start": 40540,
+      "end": 46280,
+      "en": "This means the bird's radar detectors can find them and the researchers can compare data",
+      "zh": "这意味着信天翁的雷达探测器可以找到它们，研究人员可以比较信天翁的数据",
+      "original_start": 40440,
+      "original_end": 46280
+    },
+    {
+      "index": 8,
+      "speaker": "★",
+      "start": 46380,
+      "end": 52920,
+      "en": "from the albatrosses with AIS data. Through these means, the researchers located many",
+      "zh": "与AIS数据。通过这些方法，研究人员发现了许多",
+      "original_start": 46280,
+      "original_end": 52920
+    },
+    {
+      "index": 9,
+      "speaker": "★",
+      "start": 53020,
+      "end": 59920,
+      "en": "boats that were not sending out AIS signals assigned they were probably fishing illegally.",
+      "zh": "没有发出AIS信号的船只assigned他们可能在进行非法捕鱼。",
+      "original_start": 52920,
+      "original_end": 59920
+    },
+    {
+      "index": 10,
+      "speaker": "★",
+      "start": 60020,
+      "end": 65120,
+      "en": "Conservationists, however, worry that illegal fishers could attempt to shoot birds approaching",
+      "zh": "然而，环保主义者担心非法捕鱼者可能会试图射杀靠近他们船只的鸟。",
+      "original_start": 59920,
+      "original_end": 65120
+    },
+    {
+      "index": 11,
+      "speaker": "★",
+      "start": 65220,
+      "end": 71000,
+      "en": "their vessels. The researchers, though, argue that the huge number of other bird species",
+      "zh": "但研究人员认为，每艘船周围有大量其他鸟类，而且信天翁往往保持距离，这意味着这不会成为问题。",
+      "original_start": 65120,
+      "original_end": 71000
+    },
+    {
+      "index": 12,
+      "speaker": "★",
+      "start": 71100,
+      "end": 77200,
+      "en": "around each boat and the fact that albatrosses tend to remain at a distance mean this would",
+      "zh": "每艘船周围有大量其他鸟类，而且信天翁往往保持距离，这意味着这不会成为问题。",
+      "original_start": 71000,
+      "original_end": 77200
+    },
+    {
+      "index": 13,
+      "speaker": "★",
+      "start": 77300,
+      "end": 80240,
+      "en": "not be a problem.",
+      "zh": "不会成为问题。",
+      "original_start": 77200,
+      "original_end": 80240
+    },
+    {
+      "index": 14,
+      "speaker": "★",
+      "start": 80240,
+      "end": 88240,
+      "en": "Number 23. What is one thing boats that are fishing illegally often do?",
+      "zh": "第23题。",
+      "original_start": 81240,
+      "original_end": 88240
+    },
+    {
+      "index": 15,
+      "speaker": "★",
+      "start": 96240,
+      "end": 103240,
+      "en": "Number 24. What do some conservationists worry about?",
+      "zh": "第24题。",
+      "original_start": 97240,
+      "original_end": 103240
+    }
+  ]
+}

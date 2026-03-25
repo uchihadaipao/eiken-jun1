@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04番 - 英検准1级听力点读</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a2f1a 0%, #0d1a0d 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(45, 90, 45, 0.2);
+            border-radius: 15px;
+            border: 1px solid #3d7a3d;
+        }
+        .header h1 { color: #8fbc8f; font-size: 1.8em; margin-bottom: 10px; }
+        .question-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #2d5a2d, #1a3d1a);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .answer-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #8b4513, #654321);
+            color: #ffd700;
+            padding: 6px 16px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            margin-left: 10px;
+        }
+        .progress-bar {
+            margin-top: 15px;
+            background: rgba(20, 40, 20, 0.8);
+            border-radius: 10px;
+            height: 20px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #2d5a2d, #4a8a4a);
+            transition: width 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75em;
+            color: #fff;
+        }
+        .audio-player {
+            background: rgba(20, 40, 20, 0.8);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            border: 1px solid #2d5a2d;
+        }
+        audio { width: 100%; height: 40px; border-radius: 8px; }
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .ctrl-btn {
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: 2px solid #2d5a2d;
+            background: rgba(30, 60, 30, 0.8);
+            color: #8fbc8f;
+            font-size: 0.95em;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .ctrl-btn:hover {
+            border-color: #8fbc8f;
+            box-shadow: 0 0 10px rgba(143, 188, 143, 0.3);
+        }
+        .ctrl-btn.active {
+            background: linear-gradient(135deg, #2d5a2d, #1a3d1a);
+            border-color: #8fbc8f;
+        }
+        .ctrl-btn.loop-active {
+            background: linear-gradient(135deg, #8b4513, #654321);
+            border-color: #ffd700;
+            color: #ffd700;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 5px rgba(255, 215, 0, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.8); }
+        }
+        .translation-mode .en-text {
+            display: none !important;
+        }
+        .translation-mode .sentence-card {
+            background: rgba(40, 30, 10, 0.9);
+            border-color: #8b6914;
+        }
+        .translation-mode .zh-text {
+            font-size: 1.3em !important;
+            color: #ffd700 !important;
+            font-weight: bold;
+        }
+        .hide-answer .answer-badge,
+        .hide-answer .card-answer {
+            display: none !important;
+        }
+        .sentences { display: flex; flex-direction: column; gap: 12px; }
+        .sentence-card {
+            background: rgba(20, 40, 20, 0.9);
+            border-radius: 12px;
+            padding: 18px 20px;
+            border: 2px solid #2d5a2d;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+        .sentence-card:hover {
+            border-color: #8fbc8f;
+            transform: translateX(5px);
+        }
+        .sentence-card.playing {
+            border-color: #ffd700;
+            background: rgba(40, 60, 40, 0.9);
+        }
+        .sentence-card.loop-playing {
+            border-color: #ff8c00;
+            background: rgba(50, 40, 20, 0.9);
+        }
+        /* 已校准状态 */
+        .sentence-card.calibrated {
+            border-color: #228b22;
+            background: rgba(20, 60, 30, 0.9);
+        }
+        .sentence-card.calibrated::before {
+            content: '✓';
+            position: absolute;
+            left: -8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #228b22;
+            color: #fff;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7em;
+            font-weight: bold;
+        }
+        .speaker { color: #8fbc8f; font-weight: bold; margin-right: 10px; }
+        .en-text { color: #e0e0e0; line-height: 1.6; margin: 8px 0; font-size: 1.05em; }
+        .zh-text { color: #6a8a6a; font-size: 0.95em; line-height: 1.5; font-style: italic; }
+        .card-answer {
+            margin-top: 8px;
+            color: #ffd700;
+            font-size: 0.85em;
+        }
+        /* 时间戳编辑区域 */
+        .timestamp-editor {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+            padding-top: 8px;
+            border-top: 1px dashed #3d5a3d;
+            flex-wrap: wrap;
+        }
+        .timestamp-label {
+            font-size: 0.75em;
+            color: #6a8a6a;
+            white-space: nowrap;
+        }
+        .timestamp-input {
+            width: 80px;
+            padding: 4px 8px;
+            background: rgba(10, 20, 10, 0.8);
+            border: 1px solid #3d5a3d;
+            border-radius: 4px;
+            color: #8fbc8f;
+            font-size: 0.8em;
+            font-family: monospace;
+            text-align: center;
+        }
+        .timestamp-input:focus {
+            outline: none;
+            border-color: #8fbc8f;
+            box-shadow: 0 0 5px rgba(143, 188, 143, 0.3);
+        }
+        .timestamp-input.modified {
+            border-color: #ffd700;
+            color: #ffd700;
+        }
+        /* 校准完成按钮 */
+        .calibrate-btn {
+            margin-left: auto;
+            padding: 4px 12px;
+            border-radius: 12px;
+            border: 2px solid #555;
+            background: rgba(60, 60, 60, 0.8);
+            color: #888;
+            font-size: 0.8em;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .calibrate-btn:hover {
+            border-color: #228b22;
+            color: #aaa;
+        }
+        .calibrate-btn.calibrated {
+            background: linear-gradient(135deg, #228b22, #1a6b1a);
+            border-color: #32cd32;
+            color: #fff;
+        }
+        .calibrate-btn.calibrated::before {
+            content: '✓ ';
+        }
+        .save-indicator {
+            font-size: 0.7em;
+            color: #4a7a4a;
+        }
+        .save-indicator.saved {
+            color: #8fbc8f;
+        }
+        .back-link {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .back-link a {
+            color: #8fbc8f;
+            text-decoration: none;
+            padding: 10px 25px;
+            border: 1px solid #2d5a2d;
+            border-radius: 20px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .back-link a:hover {
+            border-color: #8fbc8f;
+            background: rgba(45, 90, 45, 0.3);
+        }
+        .help-text {
+            text-align: center;
+            font-size: 0.8em;
+            color: #4a6a4a;
+            margin-bottom: 15px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="question-badge">Part 1 · 04番</div>
+            <div class="answer-badge">答案: 1</div>
+            <h1>🎧 英検准1级听力点读</h1>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill" style="width: 0%">0% (0/6)</div>
+            </div>
+        </div>
+
+        <div class="audio-player">
+            <audio id="audio" controls>
+                <source src="../Part1_04番.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <p class="help-text">💡 可直接修改时间戳，点击"待校准"按钮标记完成</p>
+
+        <div class="controls">
+            <button class="ctrl-btn active" id="speedBtn" onclick="toggleSpeed()">1.0x</button>
+            <button class="ctrl-btn" id="loopBtn" onclick="toggleLoop()">🔁 单句循环</button>
+            <button class="ctrl-btn" id="transBtn" onclick="toggleTranslation()">📖 只看译文</button>
+            <button class="ctrl-btn" id="hideAnswerBtn" onclick="toggleAnswer()">👁️ 隐藏答案</button>
+            <button class="ctrl-btn" id="exportBtn" onclick="exportToNotion()">📤 导出Notion</button>
+        </div>
+
+        <div id="exportStatus" class="help-text" style="display:none;"></div>
+
+        <div class="sentences" id="sentences">
+
+            <div class="sentence-card" data-start="0" data-end="10920" data-index="1" onclick="playSentence(this)">
+                <span class="speaker">★★</span>
+                <div class="en-text">Have you been to the new café on Main Street yet?</div>
+                <div class="zh-text">你去过主街上那家新开的咖啡馆了吗？</div>
+                <div class="timestamp-editor">
+                    <span class="timestamp-label">▶ Start:</span>
+                    <input type="number" class="timestamp-input start-input" value="0" min="0">
+                    <span class="timestamp-label">■ End:</span>
+                    <input type="number" class="timestamp-input end-input" value="10920" min="0">
+                    <button class="calibrate-btn" onclick="event.stopPropagation(); toggleCalibrated(this);">待校准</button>
+                    <span class="save-indicator">自动保存</span>
+                </div>
+            </div>
+
+            <div class="sentence-card" data-start="9770" data-end="17240" data-index="2" onclick="playSentence(this)">
+                <span class="speaker">☆</span>
+                <div class="en-text">Yes, actually I went there yesterday. The coffee was excellent, and the atmosphere was really relaxing.</div>
+                <div class="zh-text">去了，实际上我昨天去的。咖啡很棒，氛围也非常放松。</div>
+                <div class="timestamp-editor">
+                    <span class="timestamp-label">▶ Start:</span>
+                    <input type="number" class="timestamp-input start-input" value="9770" min="0">
+                    <span class="timestamp-label">■ End:</span>
+                    <input type="number" class="timestamp-input end-input" value="17240" min="0">
+                    <button class="calibrate-btn" onclick="event.stopPropagation(); toggleCalibrated(this);">待校准</button>
+                    <span class="save-indicator">自动保存</span>
+                </div>
+            </div>
+
+            <div class="sentence-card" data-start="16090" data-end="23200" data-index="3" onclick="playSentence(this)">
+                <span class="speaker">★★</span>
+                <div class="en-text">I heard they have a great lunch menu, too. Did you try the sandwiches?</div>
+                <div class="zh-text">我听说他们的午餐菜单也很不错。你尝了三明治吗？</div>
+                <div class="timestamp-editor">
+                    <span class="timestamp-label">▶ Start:</span>
+                    <input type="number" class="timestamp-input start-input" value="16090" min="0">
+                    <span class="timestamp-label">■ End:</span>
+                    <input type="number" class="timestamp-input end-input" value="23200" min="0">
+                    <button class="calibrate-btn" onclick="event.stopPropagation(); toggleCalibrated(this);">待校准</button>
+                    <span class="save-indicator">自动保存</span>
+                </div>
+            </div>
+
+            <div class="sentence-card" data-start="22050" data-end="29080" data-index="4" onclick="playSentence(this)">
+                <span class="speaker">☆</span>
+                <div class="en-text">No, I only had coffee. But the woman next to me had a club sandwich, and it looked amazing. She said it was huge.</div>
+                <div class="zh-text">没有，我只喝了咖啡。但我旁边的女士点了一份总汇三明治，看起来棒极了。她说份量很大。</div>
+                <div class="timestamp-editor">
+                    <span class="timestamp-label">▶ Start:</span>
+                    <input type="number" class="timestamp-input start-input" value="22050" min="0">
+                    <span class="timestamp-label">■ End:</span>
+                    <input type="number" class="timestamp-input end-input" value="29080" min="0">
+                    <button class="calibrate-btn" onclick="event.stopPropagation(); toggleCalibrated(this);">待校准</button>
+                    <span class="save-indicator">自动保存</span>
+                </div>
+            </div>
+
+            <div class="sentence-card" data-start="27930" data-end="38800" data-index="5" onclick="playSentence(this)">
+                <span class="speaker">★★</span>
+                <div class="en-text">Hmm, maybe I'll give it a try. I've heard the desserts are also pretty good.</div>
+                <div class="zh-text">嗯，也许我会去试试。我听说甜点也相当不错。</div>
+                <div class="timestamp-editor">
+                    <span class="timestamp-label">▶ Start:</span>
+                    <input type="number" class="timestamp-input start-input" value="27930" min="0">
+                    <span class="timestamp-label">■ End:</span>
+                    <input type="number" class="timestamp-input end-input" value="38800" min="0">
+                    <button class="calibrate-btn" onclick="event.stopPropagation(); toggleCalibrated(this);">待校准</button>
+                    <span class="save-indicator">自动保存</span>
+                </div>
+            </div>
+
+            <div class="sentence-card" data-start="37650" data-end="42920" data-index="6" onclick="playSentence(this)">
+                <span class="speaker">☆</span>
+                <div class="en-text">Question: What does the woman say about the café?</div>
+                <div class="zh-text">问题：这位女士对咖啡馆有什么评价？</div>
+                <div class="timestamp-editor">
+                    <span class="timestamp-label">▶ Start:</span>
+                    <input type="number" class="timestamp-input start-input" value="37650" min="0">
+                    <span class="timestamp-label">■ End:</span>
+                    <input type="number" class="timestamp-input end-input" value="42920" min="0">
+                    <button class="calibrate-btn" onclick="event.stopPropagation(); toggleCalibrated(this);">待校准</button>
+                    <span class="save-indicator">自动保存</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="back-link">
+            <a href="index.html">← 返回目录</a>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('audio');
+        const sentences = document.querySelectorAll('.sentence-card');
+        const storageKey = 'eiken_calibration_04番';
+        const tsStorageKey = 'eiken_timestamps_04番';
+        let isLoopMode = false;
+        let currentCard = null;
+        let isTranslationMode = false;
+        let isHideAnswer = false;
+        let playbackRate = 1.0;
+
+        // 加载保存的校准状态
+        function loadCalibration() {
+            const saved = localStorage.getItem(storageKey);
+            if (saved) {
+                try {
+                    return JSON.parse(saved);
+                } catch (e) {
+                    return {};
+                }
+            }
+            return {};
+        }
+
+        // 保存校准状态
+        function saveCalibration(index, calibrated) {
+            const data = loadCalibration();
+            data[index] = calibrated;
+            localStorage.setItem(storageKey, JSON.stringify(data));
+            updateProgressBar();
+        }
+
+        // 切换校准状态
+        function toggleCalibrated(btn) {
+            const card = btn.closest('.sentence-card');
+            const index = card.dataset.index;
+            const isCalibrated = btn.classList.contains('calibrated');
+
+            if (isCalibrated) {
+                btn.classList.remove('calibrated');
+                btn.textContent = '待校准';
+                card.classList.remove('calibrated');
+                saveCalibration(index, false);
+            } else {
+                btn.classList.add('calibrated');
+                btn.textContent = '已校准';
+                card.classList.add('calibrated');
+                saveCalibration(index, true);
+            }
+        }
+
+        // 更新进度条
+        function updateProgressBar() {
+            const cards = document.querySelectorAll('.sentence-card');
+            const calibrated = document.querySelectorAll('.sentence-card.calibrated');
+            const pct = cards.length > 0 ? Math.round(calibrated.length / cards.length * 100) : 0;
+            const fill = document.getElementById('progressFill');
+            if (fill) {
+                fill.style.width = pct + '%';
+                fill.textContent = pct + '% (' + calibrated.length + '/' + cards.length + ')';
+            }
+        }
+
+        // 加载保存的时间戳
+        function loadSavedTimestamps() {
+            const saved = localStorage.getItem(tsStorageKey);
+            if (saved) {
+                try {
+                    return JSON.parse(saved);
+                } catch (e) {
+                    return null;
+                }
+            }
+            return null;
+        }
+
+        // 保存时间戳到localStorage
+        function saveTimestamps() {
+            const timestamps = {};
+            document.querySelectorAll('.sentence-card').forEach((card, idx) => {
+                const startInput = card.querySelector('.start-input');
+                const endInput = card.querySelector('.end-input');
+                if (startInput && endInput) {
+                    timestamps[idx] = {
+                        start: parseInt(startInput.value) || 0,
+                        end: parseInt(endInput.value) || 0
+                    };
+                }
+            });
+            localStorage.setItem(tsStorageKey, JSON.stringify(timestamps));
+
+            // 显示保存提示
+            document.querySelectorAll('.save-indicator').forEach(ind => {
+                ind.textContent = '✓ 已保存';
+                ind.classList.add('saved');
+            });
+        }
+
+        // 更新播放卡片的时间戳
+        function updateCardTimestamps(card, idx, savedData) {
+            const startInput = card.querySelector('.start-input');
+            const endInput = card.querySelector('.end-input');
+            const defaultStart = card.dataset.start;
+            const defaultEnd = card.dataset.end;
+
+            if (savedData && savedData[idx]) {
+                startInput.value = savedData[idx].start;
+                endInput.value = savedData[idx].end;
+                startInput.classList.add('modified');
+                endInput.classList.add('modified');
+            } else {
+                startInput.value = defaultStart;
+                endInput.value = defaultEnd;
+            }
+
+            // 监听输入变化
+            [startInput, endInput].forEach(input => {
+                input.addEventListener('change', function() {
+                    saveTimestamps();
+                });
+                input.addEventListener('blur', function() {
+                    saveTimestamps();
+                });
+            });
+        }
+
+        // 从输入框读取时间戳
+        function getTimestampFromCard(card) {
+            const startInput = card.querySelector('.start-input');
+            const endInput = card.querySelector('.end-input');
+            return {
+                start: parseInt(startInput.value) || parseInt(card.dataset.start),
+                end: parseInt(endInput.value) || parseInt(card.dataset.end)
+            };
+        }
+
+        function playSentence(card) {
+            const ts = getTimestampFromCard(card);
+            audio.currentTime = ts.start / 1000;
+            audio.play();
+            document.querySelectorAll('.sentence-card').forEach(c => c.classList.remove('playing', 'loop-playing'));
+            card.classList.add(isLoopMode ? 'loop-playing' : 'playing');
+            currentCard = card;
+        }
+
+        audio.addEventListener('timeupdate', () => {
+            if (isLoopMode && currentCard) {
+                const ts = getTimestampFromCard(currentCard);
+                if (audio.currentTime >= ts.end / 1000) {
+                    audio.currentTime = ts.start / 1000;
+                }
+            }
+            const currentTime = audio.currentTime * 1000;
+            sentences.forEach(card => {
+                const ts = getTimestampFromCard(card);
+                if (currentTime >= ts.start && currentTime < ts.end) {
+                    card.classList.add('playing');
+                } else if (card !== currentCard) {
+                    card.classList.remove('playing');
+                }
+            });
+        });
+
+        function toggleLoop() {
+            isLoopMode = !isLoopMode;
+            document.getElementById('loopBtn').classList.toggle('loop-active', isLoopMode);
+            document.getElementById('loopBtn').classList.toggle('active', isLoopMode);
+        }
+
+        function toggleSpeed() {
+            playbackRate = playbackRate === 1.0 ? 1.2 : 1.0;
+            audio.playbackRate = playbackRate;
+            document.getElementById('speedBtn').textContent = playbackRate + 'x';
+        }
+
+        function toggleTranslation() {
+            isTranslationMode = !isTranslationMode;
+            document.body.classList.toggle('translation-mode', isTranslationMode);
+            document.getElementById('transBtn').classList.toggle('active', isTranslationMode);
+        }
+
+        function toggleAnswer() {
+            isHideAnswer = !isHideAnswer;
+            document.body.classList.toggle('hide-answer', isHideAnswer);
+            document.getElementById('hideAnswerBtn').classList.toggle('active', isHideAnswer);
+        }
+
+        // 页面加载时初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 加载校准状态
+            const calData = loadCalibration();
+            document.querySelectorAll('.sentence-card').forEach(card => {
+                const index = card.dataset.index;
+                const btn = card.querySelector('.calibrate-btn');
+                if (calData[index]) {
+                    btn.classList.add('calibrated');
+                    btn.textContent = '已校准';
+                    card.classList.add('calibrated');
+                }
+            });
+            updateProgressBar();
+
+            // 加载时间戳
+            const savedTimestamps = loadSavedTimestamps();
+            document.querySelectorAll('.sentence-card').forEach((card, idx) => {
+                updateCardTimestamps(card, idx, savedTimestamps);
+            });
+        });
+    
+                // 导出到Notion Markdown
+        function exportToNotion() {
+            const cards = document.querySelectorAll('.sentence-card');
+            const questionNum = document.querySelector('.question-badge')?.textContent?.match(/\d+/)?.[0] || '01';
+            const answer = document.querySelector('.answer-badge')?.textContent?.replace('答案:', '').trim() || '';
+            const statusEl = document.getElementById('exportStatus');
+
+            // 显示状态
+            if (statusEl) {
+                statusEl.style.display = 'block';
+                statusEl.textContent = '⏳ 正在生成文件...';
+            }
+
+            // 构建表格行
+            let rows = [];
+            cards.forEach(card => {
+                const index = card.dataset.index;
+                const speaker = card.querySelector('.speaker')?.textContent?.trim() || '';
+                const enText = card.querySelector('.en-text')?.textContent?.trim() || '';
+                const zhText = card.querySelector('.zh-text')?.textContent?.trim() || '';
+                const startInput = card.querySelector('.start-input');
+                const endInput = card.querySelector('.end-input');
+                const start = startInput?.value || card.dataset.start;
+                const end = endInput?.value || card.dataset.end;
+                const calBtn = card.querySelector('.calibrate-btn');
+                const isCalibrated = calBtn?.classList.contains('calibrated');
+
+                const calibratedMark = isCalibrated ? '✅' : '❌';
+                const timestampRange = start + 'ms-' + end + 'ms';
+
+                rows.push('| ' + index + ' | ' + speaker + ' | ' + timestampRange + ' | ' + enText + ' | ' + zhText + ' | ' + calibratedMark + ' |');
+            });
+
+            // 构建完整Markdown
+            const md = '# 第' + questionNum + '番\n\n**答案：** ' + answer + '\n\n---\n\n## 听力原文\n\n**音频：** `Part1_' + questionNum + '番.mp3`\n\n| 序号 | 说话人 | 时间范围 | 英文原文 | 中文翻译 | 校准 |\n|------|--------|----------|----------|----------|------|\n' + rows.join('\n') + '\n\n---\n\n*点击时间范围可跳转到对应音频位置*\n*校准标记：✅ 已校准 / ❌ 待校准*';
+
+            // 创建下载
+            const blob = new Blob([md], { type: 'text/markdown;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Question_' + questionNum.padStart(2, '0') + '.md';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            // 显示成功状态
+            if (statusEl) {
+                statusEl.textContent = '✅ 导出完成！文件已下载';
+                setTimeout(() => { statusEl.style.display = 'none'; }, 3000);
+            }
+        }
+
+
+
+</script>
+
+</body>
+</html>

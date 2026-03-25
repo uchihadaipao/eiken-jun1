@@ -1,0 +1,68 @@
+{
+  "question_id": "02番",
+  "audio_file": "Part1_02番.mp3",
+  "answer": "3",
+  "total_duration_sec": 44.6,
+  "segments": [
+    {
+      "index": 1,
+      "speaker": "☆",
+      "start": 0,
+      "end": 11880,
+      "en": "Jared, I got a phone call from your homeroom teacher today. She's concerned about your grades this term.",
+      "zh": "Jared，你班主任今天给我打电话了。她对你这学期的成绩很担心。",
+      "original_start": 0,
+      "original_end": 11880
+    },
+    {
+      "index": 2,
+      "speaker": "★★",
+      "start": 10730,
+      "end": 16040,
+      "en": "I thought I did OK.",
+      "zh": "我以为我考得还行。",
+      "original_start": 11930,
+      "original_end": 16040
+    },
+    {
+      "index": 3,
+      "speaker": "☆",
+      "start": 14890,
+      "end": 28240,
+      "en": "That was her point. Your grades are usually excellent, but they're only average this term. She said you won't be able to get into a good college if you don't make more of an effort.",
+      "zh": "问题就在这里。你的成绩通常很优秀，但这学期只是中等。她说如果你不更加努力，就进不了好大学。",
+      "original_start": 16090,
+      "original_end": 28240
+    },
+    {
+      "index": 4,
+      "speaker": "★★",
+      "start": 27090,
+      "end": 33839,
+      "en": "To be honest, I don't think I want to go to college anymore.",
+      "zh": "老实说，我觉得我不想上大学了。",
+      "original_start": 28290,
+      "original_end": 33839
+    },
+    {
+      "index": 5,
+      "speaker": "☆",
+      "start": 32689,
+      "end": 41200,
+      "en": "What? That's the first time I've heard about it. We'll talk about this more when your father gets home.",
+      "zh": "什么？这是我第一次听说。我们等你爸爸回家再详细谈这件事。",
+      "original_start": 33889,
+      "original_end": 41200
+    },
+    {
+      "index": 6,
+      "speaker": "★",
+      "start": 40050,
+      "end": 44599,
+      "en": "Question: What does Jared tell his mother?",
+      "zh": "问题：Jared 告诉了他妈妈什么？",
+      "original_start": 41250,
+      "original_end": 44599
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "question_id": "04番",
+  "audio_file": "Part1_04番.mp3",
+  "answer": "1",
+  "total_duration_sec": 42.92,
+  "segments": [
+    {
+      "index": 1,
+      "speaker": "★★",
+      "start": 0,
+      "end": 10920,
+      "en": "Have you been to the new café on Main Street yet?",
+      "zh": "你去过主街上那家新开的咖啡馆了吗？",
+      "original_start": 0,
+      "original_end": 10920
+    },
+    {
+      "index": 2,
+      "speaker": "☆",
+      "start": 9770,
+      "end": 17240,
+      "en": "Yes, actually I went there yesterday. The coffee was excellent, and the atmosphere was really relaxing.",
+      "zh": "去了，实际上我昨天去的。咖啡很棒，氛围也非常放松。",
+      "original_start": 10970,
+      "original_end": 17240
+    },
+    {
+      "index": 3,
+      "speaker": "★★",
+      "start": 16090,
+      "end": 23200,
+      "en": "I heard they have a great lunch menu, too. Did you try the sandwiches?",
+      "zh": "我听说他们的午餐菜单也很不错。你尝了三明治吗？",
+      "original_start": 17290,
+      "original_end": 23200
+    },
+    {
+      "index": 4,
+      "speaker": "☆",
+      "start": 22050,
+      "end": 29080,
+      "en": "No, I only had coffee. But the woman next to me had a club sandwich, and it looked amazing. She said it was huge.",
+      "zh": "没有，我只喝了咖啡。但我旁边的女士点了一份总汇三明治，看起来棒极了。她说份量很大。",
+      "original_start": 23250,
+      "original_end": 29080
+    },
+    {
+      "index": 5,
+      "speaker": "★★",
+      "start": 27930,
+      "end": 38800,
+      "en": "Hmm, maybe I'll give it a try. I've heard the desserts are also pretty good.",
+      "zh": "嗯，也许我会去试试。我听说甜点也相当不错。",
+      "original_start": 29130,
+      "original_end": 38800
+    },
+    {
+      "index": 6,
+      "speaker": "☆",
+      "start": 37650,
+      "end": 42920,
+      "en": "Question: What does the woman say about the café?",
+      "zh": "问题：这位女士对咖啡馆有什么评价？",
+      "original_start": 38850,
+      "original_end": 42920
+    }
+  ]
+}

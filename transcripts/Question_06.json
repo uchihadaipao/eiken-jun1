@@ -1,0 +1,78 @@
+{
+  "question_id": "06番",
+  "audio_file": "Part1_06番.mp3",
+  "answer": "4",
+  "total_duration_sec": 44.84,
+  "segments": [
+    {
+      "index": 1,
+      "speaker": "★★",
+      "start": 0,
+      "end": 7160,
+      "en": "Excuse me, do you know how to get to the art museum from here?",
+      "zh": "打扰一下，你知道从这里怎么去艺术博物馆吗？",
+      "original_start": 0,
+      "original_end": 7160
+    },
+    {
+      "index": 2,
+      "speaker": "☆",
+      "start": 6010,
+      "end": 15080,
+      "en": "Sure. Go straight for about two blocks, then turn left at the traffic light. The museum is on the right.",
+      "zh": "当然。直走大约两个街区，然后在红绿灯处左转。博物馆在右边。",
+      "original_start": 7210,
+      "original_end": 15080
+    },
+    {
+      "index": 3,
+      "speaker": "★★",
+      "start": 13930,
+      "end": 25240,
+      "en": "Is it within walking distance?",
+      "zh": "走路能到吗？",
+      "original_start": 15130,
+      "original_end": 25240
+    },
+    {
+      "index": 4,
+      "speaker": "☆",
+      "start": 24090,
+      "end": 30040,
+      "en": "Yes, it's about a ten-minute walk. But there's something I should mention. There's been some construction on that street, so you might want to take a detour to avoid it.",
+      "zh": "是的，走路大约十分钟。但有件事我应该提醒你。那条街一直在施工，所以你可能想绕道避开。",
+      "original_start": 25290,
+      "original_end": 30040
+    },
+    {
+      "index": 5,
+      "speaker": "★★",
+      "start": 28890,
+      "end": 38920,
+      "en": "That's good to know. Is there an alternative route?",
+      "zh": "这消息很有用。有别的路线吗？",
+      "original_start": 30090,
+      "original_end": 38920
+    },
+    {
+      "index": 6,
+      "speaker": "☆",
+      "start": 37770,
+      "end": 42920,
+      "en": "You could go past the park instead. It takes a little longer, but it's a nice walk.",
+      "zh": "你可以经过公园。那会稍微久一点，但风景不错。",
+      "original_start": 38970,
+      "original_end": 42920
+    },
+    {
+      "index": 7,
+      "speaker": "★★",
+      "start": 41770,
+      "end": 44840,
+      "en": "Question: What does the woman suggest?",
+      "zh": "问题：这位女士建议什么？",
+      "original_start": 42970,
+      "original_end": 44840
+    }
+  ]
+}

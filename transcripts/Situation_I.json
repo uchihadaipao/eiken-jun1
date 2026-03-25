@@ -1,0 +1,138 @@
+{
+  "question_id": "Situation_I",
+  "audio_file": "Part3_Situation_I.mp3",
+  "answer": "-",
+  "total_duration_sec": 65.2,
+  "segments": [
+    {
+      "index": 1,
+      "speaker": "★",
+      "start": 0,
+      "end": 16960,
+      "en": "And question number 27.",
+      "zh": "第27题。",
+      "original_start": 0,
+      "original_end": 16960
+    },
+    {
+      "index": 2,
+      "speaker": "★",
+      "start": 17060,
+      "end": 19120,
+      "en": "We're sorry for the delay.",
+      "zh": "对于延误，我们深表歉意。",
+      "original_start": 16960,
+      "original_end": 19120
+    },
+    {
+      "index": 3,
+      "speaker": "★",
+      "start": 19220,
+      "end": 25080,
+      "en": "We'll be moving again soon, but due to a fallen tree on the track, this train will only",
+      "zh": "我们很快就会再次开动，但由于轨道上有一棵倒下的树，这列火车只能",
+      "original_start": 19120,
+      "original_end": 25080
+    },
+    {
+      "index": 4,
+      "speaker": "★",
+      "start": 25180,
+      "end": 27600,
+      "en": "go as far as Pickford.",
+      "zh": "开到皮克福德为止。",
+      "original_start": 25080,
+      "original_end": 27600
+    },
+    {
+      "index": 5,
+      "speaker": "★",
+      "start": 27700,
+      "end": 32920,
+      "en": "For passengers going beyond Pickford, please get off at Doosbury, which is the next",
+      "zh": "需要前往皮克福德之后的乘客，请在杜斯伯里下车，那是下一站。",
+      "original_start": 27600,
+      "original_end": 32920
+    },
+    {
+      "index": 6,
+      "speaker": "★",
+      "start": 33020,
+      "end": 34240,
+      "en": "stop.",
+      "zh": "站。",
+      "original_start": 32920,
+      "original_end": 34240
+    },
+    {
+      "index": 7,
+      "speaker": "★",
+      "start": 34340,
+      "end": 39800,
+      "en": "A complimentary bus service from there will stop at all stations until Wexford, which",
+      "zh": "从那里开始将有免费巴士服务，停靠所有车站直到终点站韦克斯福德。",
+      "original_start": 34240,
+      "original_end": 39800
+    },
+    {
+      "index": 8,
+      "speaker": "★",
+      "start": 39900,
+      "end": 42440,
+      "en": "is the end of the line.",
+      "zh": "那是终点站。",
+      "original_start": 39800,
+      "original_end": 42440
+    },
+    {
+      "index": 9,
+      "speaker": "★",
+      "start": 42540,
+      "end": 46160,
+      "en": "Passengers traveling to Philburn and Pickford can stay on the train.",
+      "zh": "前往菲尔伯恩和皮克福德的乘客可以留在火车上。",
+      "original_start": 42440,
+      "original_end": 46160
+    },
+    {
+      "index": 10,
+      "speaker": "★",
+      "start": 46260,
+      "end": 52240,
+      "en": "However, we're expecting progress to be slow, so we recommend using the bus service",
+      "zh": "然而，我们预计进展会较慢，所以如果你们赶时间的话，建议使用巴士服务。",
+      "original_start": 46160,
+      "original_end": 52240
+    },
+    {
+      "index": 11,
+      "speaker": "★",
+      "start": 52340,
+      "end": 54080,
+      "en": "if you're in a hurry.",
+      "zh": "如果你赶时间的话。",
+      "original_start": 52240,
+      "original_end": 54080
+    },
+    {
+      "index": 12,
+      "speaker": "★",
+      "start": 54180,
+      "end": 59400,
+      "en": "We estimate the train will arrive in Pickford at 1115.",
+      "zh": "我们预计火车将于1115抵达皮克福德。",
+      "original_start": 54080,
+      "original_end": 59400
+    },
+    {
+      "index": 13,
+      "speaker": "★",
+      "start": 59500,
+      "end": 65200,
+      "en": "Now mark your answer on your answer sheet.",
+      "zh": "现在请在答题纸上标记答案。",
+      "original_start": 59400,
+      "original_end": 65200
+    }
+  ]
+}

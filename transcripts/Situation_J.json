@@ -1,0 +1,118 @@
+{
+  "question_id": "Situation_J",
+  "audio_file": "Part3_Situation_J.mp3",
+  "answer": "-",
+  "total_duration_sec": 58.92,
+  "segments": [
+    {
+      "index": 1,
+      "speaker": "★",
+      "start": 0,
+      "end": 12200,
+      "en": "And question number 28.",
+      "zh": "第28题。",
+      "original_start": 0,
+      "original_end": 12200
+    },
+    {
+      "index": 2,
+      "speaker": "★",
+      "start": 12300,
+      "end": 17240,
+      "en": "We've been busy, so we don't have many openings in the near future.",
+      "zh": "我们最近很忙，所以近期没有太多空位。",
+      "original_start": 12200,
+      "original_end": 17240
+    },
+    {
+      "index": 3,
+      "speaker": "★",
+      "start": 17340,
+      "end": 23080,
+      "en": "We've just had a cancellation for tomorrow morning at 10.30, so I could fit you in then",
+      "zh": "我们刚刚取消了明天上午10:30的预约，所以那时候可以为您安排",
+      "original_start": 17240,
+      "original_end": 23080
+    },
+    {
+      "index": 4,
+      "speaker": "★",
+      "start": 23180,
+      "end": 26680,
+      "en": "with your usual dentist, Dr. James.",
+      "zh": "您平时看的牙医James医生。",
+      "original_start": 23080,
+      "original_end": 26680
+    },
+    {
+      "index": 5,
+      "speaker": "★",
+      "start": 26780,
+      "end": 32680,
+      "en": "I've also got an opening with Dr. Manganielo on Thursday at 7.45 AM.",
+      "zh": "我还有周四早上7:45与Manganielo医生的预约空位。",
+      "original_start": 26680,
+      "original_end": 32680
+    },
+    {
+      "index": 6,
+      "speaker": "★",
+      "start": 32780,
+      "end": 40600,
+      "en": "Oh, it looks like Dr. Shah has had a cancellation today, so we could fit you in with her at noon.",
+      "zh": "哦，看起来Shah医生今天取消了预约，所以中午可以为您安排她。",
+      "original_start": 32680,
+      "original_end": 40600
+    },
+    {
+      "index": 7,
+      "speaker": "★",
+      "start": 40700,
+      "end": 42120,
+      "en": "Let's see.",
+      "zh": "让我看看。",
+      "original_start": 40600,
+      "original_end": 42120
+    },
+    {
+      "index": 8,
+      "speaker": "★",
+      "start": 42220,
+      "end": 47680,
+      "en": "If none of those work for you, I could probably get you in to see Dr. Manelo this Friday at",
+      "zh": "如果这些都不行的话，我可能可以在周五下午3点为您安排Manelo医生。",
+      "original_start": 42120,
+      "original_end": 47680
+    },
+    {
+      "index": 9,
+      "speaker": "★",
+      "start": 47780,
+      "end": 48680,
+      "en": "3.",
+      "zh": "三点。",
+      "original_start": 47680,
+      "original_end": 48680
+    },
+    {
+      "index": 10,
+      "speaker": "★",
+      "start": 48780,
+      "end": 51920,
+      "en": "You'd be his last appointment for the day.",
+      "zh": "那将是他当天的最后一个预约。",
+      "original_start": 48680,
+      "original_end": 51920
+    },
+    {
+      "index": 11,
+      "speaker": "★",
+      "start": 52020,
+      "end": 58920,
+      "en": "Now mark your answer on your answer sheet.",
+      "zh": "现在请在答题纸上标记答案。",
+      "original_start": 51920,
+      "original_end": 58920
+    }
+  ]
+}

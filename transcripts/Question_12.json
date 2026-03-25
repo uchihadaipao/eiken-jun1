@@ -1,0 +1,78 @@
+{
+  "question_id": "12番",
+  "audio_file": "Part1_12番.mp3",
+  "answer": "3",
+  "total_duration_sec": 44.96,
+  "segments": [
+    {
+      "index": 1,
+      "speaker": "★★",
+      "start": 0,
+      "end": 8840,
+      "en": "Have you submitted your university applications yet, Erin?",
+      "zh": "Erin，你提交大学申请了吗？",
+      "original_start": 0,
+      "original_end": 8840
+    },
+    {
+      "index": 2,
+      "speaker": "☆",
+      "start": 7690,
+      "end": 15560,
+      "en": "No. To be honest, I haven't even started.",
+      "zh": "没有。老实说，我还没开始。",
+      "original_start": 8890,
+      "original_end": 15560
+    },
+    {
+      "index": 3,
+      "speaker": "★★",
+      "start": 14410,
+      "end": 27240,
+      "en": "You should start soon. The deadline for some schools is at the end of this month.",
+      "zh": "你应该尽快开始了。有些学校的截止日期是这个月底。",
+      "original_start": 15610,
+      "original_end": 27240
+    },
+    {
+      "index": 4,
+      "speaker": "☆",
+      "start": 26090,
+      "end": 31200,
+      "en": "I know, but I haven't decided which schools to apply to yet. It's so stressful.",
+      "zh": "我知道，但我还没决定申请哪些学校。压力太大了。",
+      "original_start": 27290,
+      "original_end": 31200
+    },
+    {
+      "index": 5,
+      "speaker": "★★",
+      "start": 30050,
+      "end": 35840,
+      "en": "I understand, but don't wait too long. Have you thought about seeing a counselor for advice?",
+      "zh": "我理解，但别等太久。你想过找辅导员咨询建议吗？",
+      "original_start": 31250,
+      "original_end": 35840
+    },
+    {
+      "index": 6,
+      "speaker": "☆",
+      "start": 34690,
+      "end": 40640,
+      "en": "That's a good idea. I'll make an appointment.",
+      "zh": "好主意。我去预约一下。",
+      "original_start": 35890,
+      "original_end": 40640
+    },
+    {
+      "index": 7,
+      "speaker": "★★",
+      "start": 39490,
+      "end": 44960,
+      "en": "Question: What does the man suggest Erin do?",
+      "zh": "问题：这位男士建议 Erin 做什么？",
+      "original_start": 40690,
+      "original_end": 44960
+    }
+  ]
+}

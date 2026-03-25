@@ -1,0 +1,128 @@
+{
+  "question_id": "Situation_H",
+  "audio_file": "Part3_Situation_H.mp3",
+  "answer": "-",
+  "total_duration_sec": 74.2,
+  "segments": [
+    {
+      "index": 1,
+      "speaker": "★",
+      "start": 0,
+      "end": 18440,
+      "en": "Question number 26.",
+      "zh": "第26题。",
+      "original_start": 0,
+      "original_end": 18440
+    },
+    {
+      "index": 2,
+      "speaker": "★",
+      "start": 18540,
+      "end": 23000,
+      "en": "We have four different lectures for you to choose from this morning.",
+      "zh": "今天上午我们为你们准备了四场不同的讲座供选择。",
+      "original_start": 18440,
+      "original_end": 23000
+    },
+    {
+      "index": 3,
+      "speaker": "★",
+      "start": 23100,
+      "end": 29120,
+      "en": "Manalabad will be discussing the latest theories about motivating young learners, especially",
+      "zh": "Manalabad将讨论激励年轻学习者的最新理论，特别是",
+      "original_start": 23000,
+      "original_end": 29120
+    },
+    {
+      "index": 4,
+      "speaker": "★",
+      "start": 29220,
+      "end": 32040,
+      "en": "those with learning disabilities.",
+      "zh": "那些有学习障碍的人。",
+      "original_start": 29120,
+      "original_end": 32040
+    },
+    {
+      "index": 5,
+      "speaker": "★",
+      "start": 32140,
+      "end": 38960,
+      "en": "Yucati Hatayama will present her research into evaluation and assessment methods, including",
+      "zh": "Yucati Hatayama将展示她关于评估和评估方法的研究，包括",
+      "original_start": 32040,
+      "original_end": 38960
+    },
+    {
+      "index": 6,
+      "speaker": "★",
+      "start": 39060,
+      "end": 40760,
+      "en": "examinations.",
+      "zh": "考试。",
+      "original_start": 38960,
+      "original_end": 40760
+    },
+    {
+      "index": 7,
+      "speaker": "★",
+      "start": 40860,
+      "end": 47560,
+      "en": "We also have Martin Halpern's talk about improving classroom discipline, and another option",
+      "zh": "我们还有Martin Halpern关于改善课堂纪律的讲座，另一个选择是",
+      "original_start": 40760,
+      "original_end": 47560
+    },
+    {
+      "index": 8,
+      "speaker": "★",
+      "start": 47660,
+      "end": 52200,
+      "en": "is strategies for engaging students during remote learning.",
+      "zh": "在远程学习期间吸引学生参与的策略。",
+      "original_start": 47560,
+      "original_end": 52200
+    },
+    {
+      "index": 9,
+      "speaker": "★",
+      "start": 52300,
+      "end": 55200,
+      "en": "That will be given by Antonio Rossi.",
+      "zh": "那场讲座由Antonio Rossi主讲。",
+      "original_start": 52200,
+      "original_end": 55200
+    },
+    {
+      "index": 10,
+      "speaker": "★",
+      "start": 55300,
+      "end": 59200,
+      "en": "Please consult your programs for the room numbers.",
+      "zh": "请查阅你们的活动手册获取教室号码。",
+      "original_start": 55200,
+      "original_end": 59200
+    },
+    {
+      "index": 11,
+      "speaker": "★",
+      "start": 59300,
+      "end": 72200,
+      "en": "Now mark your answer on your answer sheet.",
+      "zh": "现在请在答题纸上标记答案。",
+      "original_start": 59200,
+      "original_end": 72200
+    },
+    {
+      "index": 12,
+      "speaker": "★",
+      "start": 72300,
+      "end": 74200,
+      "en": "I. You have ten seconds.",
+      "zh": "I. 你有十秒钟。",
+      "original_start": 72200,
+      "original_end": 74200
+    }
+  ]
+}

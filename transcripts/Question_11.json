@@ -1,0 +1,68 @@
+{
+  "question_id": "11番",
+  "audio_file": "Part1_11番.mp3",
+  "answer": "4",
+  "total_duration_sec": 45.6,
+  "segments": [
+    {
+      "index": 1,
+      "speaker": "★★",
+      "start": 0,
+      "end": 11680,
+      "en": "Did you see that documentary last night about corruption in the government?",
+      "zh": "你看了昨晚那个关于政府腐败的纪录片吗？",
+      "original_start": 0,
+      "original_end": 11680
+    },
+    {
+      "index": 2,
+      "speaker": "☆",
+      "start": 10530,
+      "end": 18320,
+      "en": "No, I missed it. Was it interesting?",
+      "zh": "没有，我错过了。有意思吗？",
+      "original_start": 11730,
+      "original_end": 18320
+    },
+    {
+      "index": 3,
+      "speaker": "★★",
+      "start": 17170,
+      "end": 23200,
+      "en": "Very. It showed how some government officials accepted bribes in exchange for giving companies special treatment.",
+      "zh": "非常有意思。它展示了一些政府官员如何收受贿赂来给公司特殊待遇。",
+      "original_start": 18370,
+      "original_end": 23200
+    },
+    {
+      "index": 4,
+      "speaker": "☆",
+      "start": 22050,
+      "end": 32080,
+      "en": "That's terrible. How was the evidence collected?",
+      "zh": "太可怕了。证据是怎么收集的？",
+      "original_start": 23250,
+      "original_end": 32080
+    },
+    {
+      "index": 5,
+      "speaker": "★★",
+      "start": 30930,
+      "end": 40800,
+      "en": "An undercover reporter secretly filmed several meetings. It was shocking to see.",
+      "zh": "一名卧底记者秘密拍摄了几次会议。看了令人震惊。",
+      "original_start": 32130,
+      "original_end": 40800
+    },
+    {
+      "index": 6,
+      "speaker": "☆",
+      "start": 39650,
+      "end": 45600,
+      "en": "Question: What does the man say about the documentary?",
+      "zh": "问题：这位男士对纪录片有什么评价？",
+      "original_start": 40850,
+      "original_end": 45600
+    }
+  ]
+}

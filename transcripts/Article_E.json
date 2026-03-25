@@ -1,0 +1,218 @@
+{
+  "question_id": "Article_E",
+  "audio_file": "Part2_Article_E.mp3",
+  "answer": "-",
+  "total_duration_sec": 111.66,
+  "segments": [
+    {
+      "index": 1,
+      "speaker": "★",
+      "start": 0,
+      "end": 2000,
+      "en": "e",
+      "zh": "E",
+      "original_start": 0,
+      "original_end": 2000
+    },
+    {
+      "index": 2,
+      "speaker": "★",
+      "start": 2100,
+      "end": 8000,
+      "en": "Satellite phones",
+      "zh": "卫星电话",
+      "original_start": 2000,
+      "original_end": 8000
+    },
+    {
+      "index": 3,
+      "speaker": "★",
+      "start": 8100,
+      "end": 14560,
+      "en": "As cell phone technology continued to develop in the 1980s, there was debate over whether",
+      "zh": "20世纪80年代，随着手机技术的不断发展，人们在讨论",
+      "original_start": 8000,
+      "original_end": 14560
+    },
+    {
+      "index": 4,
+      "speaker": "★",
+      "start": 14660,
+      "end": 21000,
+      "en": "it would mostly operate over satellite networks or land-based networks.",
+      "zh": "它是否主要通过卫星网络还是地面网络运行。",
+      "original_start": 14560,
+      "original_end": 21000
+    },
+    {
+      "index": 5,
+      "speaker": "★",
+      "start": 21100,
+      "end": 26840,
+      "en": "Satellite networks were attractive because they promised connectivity in remote parts",
+      "zh": "卫星网络很有吸引力，因为它们承诺可以在地面网络无法到达的偏远地区提供连接。",
+      "original_start": 21000,
+      "original_end": 26840
+    },
+    {
+      "index": 6,
+      "speaker": "★",
+      "start": 26940,
+      "end": 30840,
+      "en": "of the world that land-based networks could not reach.",
+      "zh": "世界上地面网络无法到达的偏远地区。",
+      "original_start": 26840,
+      "original_end": 30840
+    },
+    {
+      "index": 7,
+      "speaker": "★",
+      "start": 30940,
+      "end": 37480,
+      "en": "However, the high cost of getting satellites into orbit and the time required to obtain",
+      "zh": "然而，将卫星送入轨道的成本高昂，获得发射所需的政府批准需要时间，",
+      "original_start": 30840,
+      "original_end": 37480
+    },
+    {
+      "index": 8,
+      "speaker": "★",
+      "start": 37580,
+      "end": 44120,
+      "en": "government approval for launches delayed the development of satellite networks, so land-based",
+      "zh": "这延迟了卫星网络的发展，所以地面网络占了上风。",
+      "original_start": 37480,
+      "original_end": 44120
+    },
+    {
+      "index": 9,
+      "speaker": "★",
+      "start": 44220,
+      "end": 46120,
+      "en": "networks took over.",
+      "zh": "网络占据了主导地位。",
+      "original_start": 44120,
+      "original_end": 46120
+    },
+    {
+      "index": 10,
+      "speaker": "★",
+      "start": 46220,
+      "end": 50519,
+      "en": "Today, satellites have become much cheaper to launch.",
+      "zh": "如今，发射卫星已经变得便宜很多。",
+      "original_start": 46120,
+      "original_end": 50519
+    },
+    {
+      "index": 11,
+      "speaker": "★",
+      "start": 50619,
+      "end": 56440,
+      "en": "This has led to renewed interest in satellite networks, and major companies are already",
+      "zh": "这引发了人们对卫星网络的重新关注，主要公司已经开始",
+      "original_start": 50520,
+      "original_end": 56440
+    },
+    {
+      "index": 12,
+      "speaker": "★",
+      "start": 56540,
+      "end": 62760,
+      "en": "marketing smartphones that can send text messages via satellites.",
+      "zh": "营销可以通过卫星发送短信的智能手机。",
+      "original_start": 56440,
+      "original_end": 62760
+    },
+    {
+      "index": 13,
+      "speaker": "★",
+      "start": 62860,
+      "end": 68400,
+      "en": "Experts point out, however, that connectivity anywhere in the world is still a long way",
+      "zh": "然而，专家指出，在世界任何地方都能连接的目标仍然遥遥无期。",
+      "original_start": 62760,
+      "original_end": 68400
+    },
+    {
+      "index": 14,
+      "speaker": "★",
+      "start": 68500,
+      "end": 70000,
+      "en": "off.",
+      "zh": "还有很长的路要走。",
+      "original_start": 68400,
+      "original_end": 70000
+    },
+    {
+      "index": 15,
+      "speaker": "★",
+      "start": 70100,
+      "end": 76660,
+      "en": "One problem is that satellite phones experience poor connection in areas with hills or",
+      "zh": "一个问题是有卫星电话在有山丘或",
+      "original_start": 70000,
+      "original_end": 76660
+    },
+    {
+      "index": 16,
+      "speaker": "★",
+      "start": 76760,
+      "end": 83660,
+      "en": "tall buildings, since a clear path to the satellite is needed for them to work well.",
+      "zh": "高大建筑物的地方连接很差，因为它们需要与卫星之间有清晰的视线才能正常工作。",
+      "original_start": 76660,
+      "original_end": 83660
+    },
+    {
+      "index": 17,
+      "speaker": "★",
+      "start": 83760,
+      "end": 85660,
+      "en": "Questions",
+      "zh": "问题",
+      "original_start": 83660,
+      "original_end": 85660
+    },
+    {
+      "index": 18,
+      "speaker": "★",
+      "start": 85760,
+      "end": 87660,
+      "en": "Number 21",
+      "zh": "第21题。",
+      "original_start": 85660,
+      "original_end": 87660
+    },
+    {
+      "index": 19,
+      "speaker": "★",
+      "start": 87760,
+      "end": 94660,
+      "en": "Why did satellite phone networks fail to become widely used in the 1980s?",
+      "zh": "为什么20世纪80年代卫星电话网络没有广泛使用？",
+      "original_start": 87660,
+      "original_end": 94660
+    },
+    {
+      "index": 20,
+      "speaker": "★",
+      "start": 102660,
+      "end": 105660,
+      "en": "Number 22",
+      "zh": "第22题。",
+      "original_start": 103660,
+      "original_end": 105660
+    },
+    {
+      "index": 21,
+      "speaker": "★",
+      "start": 105760,
+      "end": 111660,
+      "en": "What do some experts say about satellite phones today?",
+      "zh": "一些专家对当今的卫星电话有什么看法？",
+      "original_start": 105660,
+      "original_end": 111660
+    }
+  ]
+}

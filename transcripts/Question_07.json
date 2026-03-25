@@ -1,0 +1,78 @@
+{
+  "question_id": "07番",
+  "audio_file": "Part1_07番.mp3",
+  "answer": "2",
+  "total_duration_sec": 43.64,
+  "segments": [
+    {
+      "index": 1,
+      "speaker": "☆",
+      "start": 0,
+      "end": 9320,
+      "en": "I just heard there's a new Italian restaurant that opened up near the train station.",
+      "zh": "我刚听说火车站附近新开了一家意大利餐厅。",
+      "original_start": 0,
+      "original_end": 9320
+    },
+    {
+      "index": 2,
+      "speaker": "★★",
+      "start": 8170,
+      "end": 12800,
+      "en": "Oh, which one? I've been wanting to try some new places.",
+      "zh": "哦，哪一家？我一直想尝试一些新的地方。",
+      "original_start": 9370,
+      "original_end": 12800
+    },
+    {
+      "index": 3,
+      "speaker": "☆",
+      "start": 11650,
+      "end": 23280,
+      "en": "It's called La Piazza. My friend recommended it. She said the food is authentic and not too pricey.",
+      "zh": "叫 La Piazza。我朋友推荐的。她说食物很正宗，价格也不太贵。",
+      "original_start": 12850,
+      "original_end": 23280
+    },
+    {
+      "index": 4,
+      "speaker": "★★",
+      "start": 22130,
+      "end": 27880,
+      "en": "That sounds good. How was the service?",
+      "zh": "听起来不错。服务怎么样？",
+      "original_start": 23330,
+      "original_end": 27880
+    },
+    {
+      "index": 5,
+      "speaker": "☆",
+      "start": 26730,
+      "end": 35879,
+      "en": "She said it's excellent. And the portions are generous, so you won't leave hungry.",
+      "zh": "她说服务很棒。而且份量很足，所以你不会饿着肚子离开。",
+      "original_start": 27930,
+      "original_end": 35879
+    },
+    {
+      "index": 6,
+      "speaker": "★★",
+      "start": 34729,
+      "end": 40720,
+      "en": "We should definitely check it out. Are you free this weekend?",
+      "zh": "我们一定要去看看。你这周末有空吗？",
+      "original_start": 35929,
+      "original_end": 40720
+    },
+    {
+      "index": 7,
+      "speaker": "☆",
+      "start": 39570,
+      "end": 43640,
+      "en": "Question: What does the woman say about the restaurant?",
+      "zh": "问题：这位女士对餐厅有什么评价？",
+      "original_start": 40770,
+      "original_end": 43640
+    }
+  ]
+}

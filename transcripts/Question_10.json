@@ -1,0 +1,78 @@
+{
+  "question_id": "10番",
+  "audio_file": "Part1_10番.mp3",
+  "answer": "1",
+  "total_duration_sec": 38.2,
+  "segments": [
+    {
+      "index": 1,
+      "speaker": "★★",
+      "start": 0,
+      "end": 9620,
+      "en": "George, the boss is looking for you, and she doesn't look happy.",
+      "zh": "George，老板在找你，她看起来不太高兴。",
+      "original_start": 0,
+      "original_end": 9620
+    },
+    {
+      "index": 2,
+      "speaker": "★",
+      "start": 8470,
+      "end": 15680,
+      "en": "I wonder what I did wrong this time.",
+      "zh": "我想知道这次我又做错了什么。",
+      "original_start": 9670,
+      "original_end": 15680
+    },
+    {
+      "index": 3,
+      "speaker": "★★",
+      "start": 14530,
+      "end": 21840,
+      "en": "I don't know, but maybe it's about that report you submitted yesterday?",
+      "zh": "我不知道，但也许是你昨天提交的那份报告？",
+      "original_start": 15730,
+      "original_end": 21840
+    },
+    {
+      "index": 4,
+      "speaker": "★",
+      "start": 20690,
+      "end": 27560,
+      "en": "What about it? I worked really hard on it.",
+      "zh": "那份怎么了？我真的很努力做的。",
+      "original_start": 21890,
+      "original_end": 27560
+    },
+    {
+      "index": 5,
+      "speaker": "★★",
+      "start": 26410,
+      "end": 33199,
+      "en": "Well, I heard she thought there were several mistakes in it.",
+      "zh": "嗯，我听说她认为里面有几个错误。",
+      "original_start": 27610,
+      "original_end": 33199
+    },
+    {
+      "index": 6,
+      "speaker": "★",
+      "start": 32049,
+      "end": 36200,
+      "en": "Oh no. I hope I didn't make any serious errors.",
+      "zh": "哦不。希望我没有犯什么严重的错误。",
+      "original_start": 33249,
+      "original_end": 36200
+    },
+    {
+      "index": 7,
+      "speaker": "★★",
+      "start": 35050,
+      "end": 38200,
+      "en": "Question: What is the woman implying?",
+      "zh": "问题：这位女士在暗示什么？",
+      "original_start": 36250,
+      "original_end": 38200
+    }
+  ]
+}
