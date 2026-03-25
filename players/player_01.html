@@ -673,15 +673,6 @@
                 setTimeout(() => { statusEl.style.display = 'none'; }, 3000);
             }
         }
-
-            // 显示导出状态
-            const status = document.getElementById('exportStatus');
-            const calCount = document.querySelectorAll('.sentence-card.calibrated').length;
-            const totalCount = cards.length;
-            status.textContent = `✅ 已导出！包含 ${calCount}/${totalCount} 条已校准记录 → 下载文件覆盖到 notion/ 目录`;
-            status.style.display = 'block';
-            status.style.color = '#8fbc8f';
-        }
     </script>
 
 </body>
