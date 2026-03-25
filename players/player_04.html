@@ -274,7 +274,7 @@
 
         <div class="audio-player">
             <audio id="audio" controls>
-                <source src="../Part1_04番.mp3" type="audio/mpeg">
+                <source src="Part1_Question_04.mp3" type="audio/mpeg">
             </audio>
         </div>
 
@@ -626,7 +626,7 @@
             });
 
             // 构建完整Markdown
-            const md = '# 第' + questionNum + '番\n\n**答案：** ' + answer + '\n\n---\n\n## 听力原文\n\n**音频：** `Part1_' + questionNum + '番.mp3`\n\n| 序号 | 说话人 | 时间范围 | 英文原文 | 中文翻译 | 校准 |\n|------|--------|----------|----------|----------|------|\n' + rows.join('\n') + '\n\n---\n\n*点击时间范围可跳转到对应音频位置*\n*校准标记：✅ 已校准 / ❌ 待校准*';
+            const md = '# 第' + questionNum + '番\n\n**答案：** ' + answer + '\n\n---\n\n## 听力原文\n\n**音频：** `Part1_Question_' + questionNum + '.mp3`\n\n| 序号 | 说话人 | 时间范围 | 英文原文 | 中文翻译 | 校准 |\n|------|--------|----------|----------|----------|------|\n' + rows.join('\n') + '\n\n---\n\n*点击时间范围可跳转到对应音频位置*\n*校准标记：✅ 已校准 / ❌ 待校准*';
 
             // 创建下载
             const blob = new Blob([md], { type: 'text/markdown;charset=utf-8' });
